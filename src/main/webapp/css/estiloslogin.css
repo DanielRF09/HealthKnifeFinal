@@ -1,0 +1,677 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/12/2020, 07:43:24 PM
+    Author     : Gerardo
+*/
+*{
+    margin:0;
+    padding:2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size:10px;
+}
+/* https://materialdesignicons.com/*/
+body{
+    font-family:Roboto;
+    font-size:16px;
+}
+
+header .contenedor{
+    position:relative;
+    height:175px;
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+}
+
+
+header{
+    width:100%;
+    background: url(../img/susho.jpg);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+
+header .menu{
+    width: 100%;
+    text-align:right;
+    height:7.4rem;
+    position:fixed;
+    z-index:4;
+    transition:all .4s ease;
+    background-color:black;
+
+}
+header .menu:hover{
+    opacity:.9;
+    height:7.4rem;
+}
+header .menu .btn_login{
+    background: url(../img/usero.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    transition:all .2s ease;
+    height:10px;
+}
+header .menu .btn_login:hover{
+    background: url(../img/user.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header .menu .btn_carrito{
+    background: url(../img/carto.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    transition:all .2s ease;
+}
+header .menu .btn_carrito:hover{
+    background: url(../img/cart.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 10px;
+
+}
+header .menu .nose,.btn_carrito, .btn_login{
+    color: #fff;
+    font-size:17px;
+    font-weight:200;
+    display:inline-block;
+    text-decoration:none;
+    margin:0px 1.14%;
+    position:relative;
+    padding:24px;
+    vertical-align:middle;
+    transition: all .2s ease;
+}
+
+
+header .menu .nose:hover{
+    opacity:1;
+    background-color: blanchedalmond;
+    border-radius:1.3px;
+    border-bottom: blue;
+    border: 10px;
+}
+.logi{
+    padding:0px;
+    margin:0px 0%;
+    vertical-align:middle;
+    float:left;
+    opacity:.85; 
+    margin-left:0%;
+    padding-top: 1%;
+    position:relative;
+}
+.logo{
+    width:73px;
+    vertical-align:top;
+    z-index:17;
+}
+.contlogo{
+    padding-left:6%;
+}
+.contbotones{
+    text-align: center;
+    margin-right:10%;
+    margin-left: 10%;
+}
+.logi:hover{
+    opacity:1;
+}
+header .textos{
+    width: 100%;
+    color: #fff;
+    position:absolute;
+    text-align:center;
+    top:35%;
+
+}
+header .textos .nombre{
+    font-size:5rem;
+    font-weight:300;
+    position:relative;
+}
+.main{
+    background:#06192e;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+.main .login{
+    /*background-color: #06192e;*/
+    width: 45%;
+    /*background-color: green;*/    
+    /*position: absolute;*/
+}
+.main .registrarse{
+    /*background-color: #06192e;*/
+    /*background-color: red;*/
+    width: 45%;
+}
+.main .login,.registrarse{
+    display: inline-block;
+    color: white;
+}
+.inputs{
+    display: grid;
+}
+.inplog1, .inplog2, .inplog3, .inplog7, .inplog8{
+    height: 30px;
+    padding: 0 10px;
+    margin: 3px 0;
+    background-color:#06192e;
+    border-radius: 5px;
+    border: 0px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.inplog4, .inplog5, .inplog6{
+    height: 30px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 3px 0;
+    background-color:#06192e;
+    border-radius: 5px;
+    border: 0px;
+    border-bottom: 1px solid white;
+    color: white;
+}
+label{
+    color: white;
+    text-align: left;
+    float: left;
+    margin-top: 20px;
+}
+
+h2{
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    color:white;
+}
+.contenedorform{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+.alinear{
+    display: inline-flex;
+}
+.submit{
+    background-color: white;
+    text-align: center;
+    border: 0px;
+    border-radius: 40px;
+    text-decoration: none;
+    color:black;
+    font-size: 16px;
+    margin-top: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: inline-block !important;
+    width: 200px !important;
+    height: 47px !important;
+}
+.noseya{
+    width: 200px;
+    padding: 15px;
+}
+.grupodebotones{
+
+    float: left;
+    display: flex;
+}
+input[type="radio"]{
+    color: white;
+    flex-wrap: wrap;
+    display: inline-flex;
+    width: 40px;
+    -ms-transform: scale(1.9); /* IE 9 */
+    -webkit-transform: scale(1.9); /* Chrome, Safari, Opera */
+    transform: scale(1.9);
+    border: 0px;
+
+
+}
+.rbot{
+    display: flex;
+    margin-right: 20px;
+}
+.rbot label{
+    display: flex;
+    margin: 0px;
+    margin-left:10px;
+}
+
+
+.footer{
+    width: 100%;
+    height: 180px;
+    background-color: #06192e;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size:10px;
+}
+/* https://materialdesignicons.com/*/
+body{
+    font-family:Roboto;
+    font-size:16px;
+}
+
+header .contenedor{
+    position:relative;
+    height:465px;
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+}
+
+
+header{
+    width:100%;
+    background: url(../img/susho.jpg);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+
+header .menu{
+    width: 100%;
+    text-align:right;
+    height:7.4rem;
+    position:fixed;
+    z-index:4;
+    transition:all .4s ease;
+
+}
+header .menu:hover{
+
+    background-color:black;
+    opacity:.9;
+    height:7.4rem;
+
+
+}
+header .menu .btn_login{
+    background: url(../img/usero.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    transition:all .2s ease;
+    height:10px;
+}
+header .menu .btn_login:hover{
+    background: url(../img/user.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header .menu .btn_carrito{
+    background: url(../img/carto.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    transition:all .2s ease;
+    height:2px;
+}
+header .menu .btn_carrito:hover{
+    background: url(../img/cart.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+
+}
+header .menu .nose,.btn_carrito, .btn_login{
+    color: #fff;
+    font-size:17px;
+    font-weight:200;
+    display:inline-block;
+    text-decoration:none;
+    margin:0px 1.14%;
+    position:relative;
+    padding:24px;
+    vertical-align:middle;
+    transition: all .2s ease;
+
+
+}
+
+
+header .menu .nose:hover{
+    opacity:1;
+    border-radius:1.3px;
+    font-size:20.5px;
+    color:black;
+    background-color:white;
+
+}
+.logi{
+    padding:0px;
+    margin:0px 0%;
+    vertical-align:middle;
+    float:left;
+    opacity:.85; 
+    margin-left:0%;
+    padding-top: 1%;
+    position:relative;
+}
+.logo{
+    width:73px;
+    vertical-align:top;
+    z-index:17;
+}
+.contlogo{
+    padding-left:6%;
+}
+.contbotones{
+    text-align: center;
+    margin-right:10%;
+    margin-left: 10%;
+}
+.logi:hover{
+    opacity:1;
+}
+header .textos{
+    width: 100%;
+    color: #fff;
+    position:absolute;
+    text-align:center;
+    top:35%;
+
+}
+header .textos .nombre{
+    font-size:5rem;
+    font-weight:300;
+    position:relative;
+
+}
+
+
+.boton{
+    background-color: white;
+    text-align: center;
+    border-radius: 40px;
+    text-decoration: none;
+    color:black;
+    font-size: 16px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    display: inline-block !important;
+    width: 243px !important;
+    height: 47px !important;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 50%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+
+
+.main{
+    background:#06192e;
+    background-repeat:repeat;
+
+}
+
+
+.main .acerca-de{
+
+    width:100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position:relative;
+    max-width:300px;
+    margin:auto;
+    overflow:visible;
+    text-align: center;
+
+    color: white;
+}
+
+
+
+
+.main .acerca-de p{
+    font-weight: 1;
+}
+.main .acerca-de img{
+    width:100%;
+    height:100%;
+    vertical-align:top;
+    border-radius: 5px;
+}
+.contenedorf{
+    display: -webkit-box ;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.fotosf{
+    display: flex;
+}
+.conttextof{
+    width: 300px;
+    margin-left: 5%;
+    padding-top: 45px;
+}
+.conttextof p{
+    font-weight:100;	
+}
+.fotoscomida1, .fotoscomida2, .fotoscomida3{
+    width:150px;
+    height:300px;
+    margin-right: 10px;
+    filter: grayscale(100%);
+    transition: all .1s;
+}
+.fotoscomida1:hover, .fotoscomida2:hover, .fotoscomida3:hover{
+    filter: grayscale(0%);
+}
+.fotoscomida1{
+    background: url(../img/ensalada1.jpg);
+    background-position: center;
+    background-attachment: inherit;
+    background-size: cover;
+}
+.fotoscomida2{
+    background: url(../img/ensalada2.jpg);
+    background-position: center;
+    background-attachment: inherit;
+    background-size: cover;
+}
+.fotoscomida3{
+    background: url(../img/ensalada3.jpg);
+    background-position: center;
+    background-attachment: inherit;
+    background-size: cover;
+}
+
+
+
+.contenedorf2{
+
+    display: -webkit-box ;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.conttextof2{
+
+    width: 300px;
+    margin-left: 5%;
+    padding-top: 45px;
+
+}
+
+.fotosf2{
+
+    display: flex;
+    margin-left: 10%;
+
+}
+.fotoscomidaf2{
+    background: url(../img/sandiasonrisa.jpg);
+    background-position: center;
+    background-attachment: inherit;
+    background-size: cover;
+    width:35rem;
+    height:300px;
+    margin-right: 10px;
+    border: 10px solid whitesmoke;
+    box-shadow: 5px 5px 5px silver;
+
+}
+
+
+
+
+.main .fotos {
+    background:#f6f6f6;
+    width:100%;
+
+
+}
+.main .info {
+    background:white;
+    width:100%;
+    height:500px;
+    position:relative;
+
+}
+
+
+
+
+.footer{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #06192e;
+}
+.foot{
+
+    width: 60%;
+    margin-right: auto;
+    display: flex;
+    margin-left: auto;
+}
+.terms, .redes{
+    width: inherit;
+}
+.terms{
+    display: grid;
+
+    text-align: center;
+}
+.terms a{
+    color: white;
+}
+.redes{
+    display: flex;
+
+}
+.icons{
+    width: 26px;
+    margin-top: 18px;
+    margin-right: 20px;
+}
+.iconall{
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*.g-signin2{
+    background-color: red;
+    height: 100px;
+}
+
+.status{
+    background-color: green;
+    height: 80px;
+}*/
+
+.g-signin2{
+    /*background-color: red;*/
+    display: flex;
+    justify-content: center;
+}
+
+#login{
+    /*background-color: green;*/
+}
+#registrarse{
+    /*background-color: blue;*/
+}
+#main{
+    /*background-color: yellow;*/
+    display: flex;
+    justify-content: space-around;
+}
+.scentrado{
+    margin-top: 2%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+#myImg{
+    /*padding: 5px;*/
+    /*display: flex;*/
+    /*background-color: pink;*/
+    /*width: 70px;*/
+}
+
+.reg{
+    /*background-color: purple;*/
+}
+
+.stitulo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.imgProfile{
+    display: flex;
+    /*background-color: orange;*/
+    margin:  3px;
+}

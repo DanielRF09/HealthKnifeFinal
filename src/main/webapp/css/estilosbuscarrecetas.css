@@ -1,0 +1,294 @@
+*{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html{
+	font-size:10px;
+}
+/* https://materialdesignicons.com/*/
+body{
+	font-family:Roboto;
+	font-size:16px;
+}
+
+header .contenedor{
+	position:relative;
+	height:175px;
+	width:100%;
+	margin:auto;
+	overflow:hidden;
+}
+
+
+header{
+	width:100%;
+	background: url(../img/susho.jpg);
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+
+
+header .menu{
+	width: 100%;
+	text-align:right;
+	height:7.4rem;
+	position:fixed;
+	z-index:4;
+	transition:all .4s ease;
+	background-color:black;
+
+}
+header .menu:hover{
+	
+	
+	opacity:.9;
+	height:7.4rem;
+	
+
+}
+header .menu .btn_login{
+	background: url(../img/usero.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	transition:all .2s ease;
+	height:10px;
+}
+header .menu .btn_login:hover{
+	background: url(../img/user.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+header .menu .btn_carrito{
+	background: url(../img/carto.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	transition:all .2s ease;
+
+	
+}
+header .menu .btn_carrito:hover{
+	background: url(../img/cart.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size:cover;
+	height: 10px;
+	
+}
+header .menu .nose,.btn_carrito, .btn_login{
+	color: #fff;
+	font-size:17px;
+	font-weight:200;
+	display:inline-block;
+	text-decoration:none;
+	margin:0px 1.14%;
+	position:relative;
+	padding:24px;
+	vertical-align:middle;
+	transition: all .2s ease;
+
+	
+}
+
+
+header .menu .nose:hover{
+	opacity:1;
+	background-color: blanchedalmond;
+	border-radius:1.3px;
+	border-bottom: blue;
+	border: 10px;
+	
+	
+	
+}
+.logi{
+	padding:0px;
+	margin:0px 0%;
+	vertical-align:middle;
+	float:left;
+    opacity:.85; 
+	margin-left:0%;
+	padding-top: 1%;
+	position:relative;
+}
+.logo{
+	width:73px;
+	vertical-align:top;
+	z-index:17;
+}
+.contlogo{
+	padding-left:6%;
+}
+.contbotones{
+	text-align: center;
+	margin-right:10%;
+	margin-left: 10%;
+}
+.logi:hover{
+	opacity:1;
+}
+header .textos{
+	width: 100%;
+	color: #fff;
+	position:absolute;
+	text-align:center;
+	top:35%;
+	
+}
+
+
+
+
+.main{
+	background:#06192e;
+	width: 100%;
+	
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	
+
+}
+h2{
+
+	margin-bottom: 5px;
+	color:white;
+}
+.formulario{
+	display: inline;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.contform{
+	 
+	 width: 70%;
+	 margin-left: auto;
+	 margin-right: auto;
+}
+form label{
+	color: white;
+	display: flex;
+}
+form select{
+	width: 200px;
+	display: block;
+
+}
+.selectslargos{
+	background-color:whitesmoke;
+	width: 100%;
+	height:35px ;
+    margin-bottom:30px;
+}
+.selectscortos{
+	background:lavender;
+	height: 40px;
+	width: 100%;
+	
+	overflow: hidden;
+	
+	/* presentation only */
+	
+}
+
+.opcchicas{
+	display: flex;
+	width: 100%;
+	margin-top: 30px;
+	
+}
+.opcchicas div{
+	width: inherit;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+.opcgrandes div{
+	width: inherit;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+.submit{
+	
+		background-color: white;
+		text-align: center;
+		border: 0px;
+		border-radius: 40px;
+		font-weight: bold;
+		text-decoration: none;
+		color:black;
+		font-size: 16px;
+		margin-top: 35px;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		float: right;
+		display: inline-block !important;
+		width: 200px !important;
+		height: 47px !important;
+	
+}
+.footer{
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #06192e;
+}
+.foot{
+
+	width: 60%;
+	margin-right: auto;
+	display: flex;
+	margin-left: auto;
+}
+.terms, .redes{
+	width: inherit;
+}
+.terms{
+	display: grid;
+	
+	text-align: center;
+}
+.terms a{
+	color: white;
+}
+.redes{
+	display: flex;
+	
+}
+.icons{
+	width: 26px;
+	margin-top: 18px;
+	margin-right: 20px;
+}
+.iconall{
+
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

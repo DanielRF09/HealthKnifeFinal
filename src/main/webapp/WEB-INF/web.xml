@@ -1,0 +1,109 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Controlador</servlet-name>
+  	<display-name>Controlador</display-name>
+  	<description></description>
+  	<servlet-class>Controlador.Controlador</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ControladorAdministrador</servlet-name>
+  	<display-name>ControladorAdministrador</display-name>
+  	<description></description>
+  	<servlet-class>Controlador.ControladorAdministrador</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ControladorBlog</servlet-name>
+  	<display-name>ControladorBlog</display-name>
+  	<description></description>
+  	<servlet-class>Controlador.ControladorBlog</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ControladorCRecetas</servlet-name>
+  	<display-name>ControladorCRecetas</display-name>
+  	<description></description>
+  	<servlet-class>Controlador.ControladorCRecetas</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ControladorNutriologo</servlet-name>
+  	<display-name>ControladorNutriologo</display-name>
+  	<description></description>
+  	<servlet-class>Controlador.ControladorNutriologo</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ControladorReceta</servlet-name>
+  	<display-name>ControladorReceta</display-name>
+  	<description></description>
+  	<servlet-class>Controlador.ControladorReceta</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Verificar</servlet-name>
+  	<display-name>Verificar</display-name>
+  	<description></description>
+  	<servlet-class>Controlador.Verificar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Controlador</servlet-name>
+  	<url-pattern>/Controlador</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ControladorAdministrador</servlet-name>
+  	<url-pattern>/ControladorAdministrador</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ControladorBlog</servlet-name>
+  	<url-pattern>/ControladorBlog</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ControladorCRecetas</servlet-name>
+  	<url-pattern>/ControladorCRecetas</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ControladorNutriologo</servlet-name>
+  	<url-pattern>/ControladorNutriologo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ControladorReceta</servlet-name>
+  	<url-pattern>/ControladorReceta</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Verificar</servlet-name>
+  	<url-pattern>/Verificar</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+  </session-config>
+  
+  <error-page>
+        <error-code>404</error-code>
+        <location>/Errores/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/Errores/403.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/Errores/405.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/Errores/500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>501</error-code>
+        <location>/Errores/501.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/Errores/503.jsp</location>
+    </error-page>
+  
+</web-app>
