@@ -32,10 +32,33 @@
             }
 //            window.onload() = byeGoogle;
         </script>
+        
+        <script type="text/javascript" src="js/validacionreg.js"></script>
+        <script>
+			function aceptnoacep(){
+				if (document.getElementById('acepto').checked) {
+					document.getElementById('enviar').disabled = false
+				} else if (document.getElementById('noacepto').checked) {
+					document.getElementById('enviar').disabled = true
+					alert("Porfavor acepta los términos y condiciones de la aplicación para poder registrarte");
+				}
+			}
+			
+			function aceptnoacepgoogle(){
+				if (document.getElementById('aceptogoogle').checked) {
+					document.getElementById('elprimo').disabled = false
+				} else if (document.getElementById('noaceptogoogle').checked) {
+					document.getElementById('elprimo').disabled = true
+					alert("Porfavor acepta los términos y condiciones de la aplicación para poder registrarte");
+				}
+			}
+		
+		
+		</script>
 
         <title>Login</title>
     </head>
-    <body>
+    <body oncopy="return false" onpaste="return false">
         <header>
             <div class="contenedor">
 			
@@ -47,9 +70,8 @@
                                 <a href="index.jsp" class="nose" class="btn_articulos">Inicio</a>
                                 <a href="BusquedaRecetas.jsp"  class="nose" class="btn_contacto">Buscar Receta</a>
                                 <a href="ControladorReceta?accion=listarindexPrincipal" class="nose" class="btn_nosotros">Recetas</a>
-                                <a href="#"  class="nose" class="btn_contacto">Servicios</a>
-                                <a href="#"  class="nose" class="btn_nosostros">Nosotros</a>
-                                <a  href="login.jsp" class="btn_login"></a>			
+                                <a href="Nosotros.jsp" class="nose" class="btn_nosotros">Nosotros</a>
+                                <a  href="login.jsp" class="btn_login"></a>					
                         </div>
 										
                 </nav>
@@ -137,7 +159,28 @@
                                 <input required="" type="hidden" class="inplog7" name="emailGoogle" id="emailG" readonly="false" placeholder="Ingresa un correo electronico">
                                 <input type="hidden" value="3" name="tipo">
                             </div>
-                            <input type="submit" class="submit" name="google1" id="elprimo" value="Continuar con Google">
+                            <br>
+                            <br>
+                            
+                            <p>Acepto los</p><a href="terminoscondicionessinUser.jsp" style="color:white;">Términos y condiciones</a>
+                            <br>
+                            <br>
+                            
+                            <div style="margin-left:25%;">
+                            
+                            	<label>
+									<input type="radio" id="aceptogoogle" name="hola" value="acepto" style="text-align:center;" onclick="aceptnoacepgoogle()">Acepto
+								</label>
+								<label style="margin-left:95px;">
+									<input type="radio" id="noaceptogoogle" name="hola" value="noacepto" onclick="aceptnoacepgoogle()">No acepto
+								</label>
+								<br>
+                            <br>
+                            </div>
+                            <br>
+                            <br>
+                            
+                            <input type="submit" class="submit" name="google1" id="elprimo" value="Continuar con Google" disabled="true">
                         </form>
                         <br>
                         <button class="submit" onclick="cerrarGoogle()">Cancelar</button>
@@ -161,15 +204,15 @@
                             <div class="alinear">
                                 <div class="noseya">
                                     <label for="inplog4">Nombre</label>
-                                    <input required="" type="text" class="inplog4" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
+                                    <input required="" type="text" class="inplog4" name="nombre" id="nombre" placeholder="Ingresa tu nombre" onkeypress="return validarn(event)">
                                 </div>
                                 <div class="noseya">
                                     <label for="inplog5">Apellido Paterno</label>
-                                    <input required="" type="text" class="inplog5" name="appat" id="appat" placeholder="Ingresa tu Apellido Paterno">
+                                    <input required="" type="text" class="inplog5" name="appat" id="appat" placeholder="Ingresa tu Apellido Paterno" onkeypress="return validarn(event)">
                                 </div>
                                 <div class="noseya">
                                     <label for="inplog6">Apellido Materno</label>
-                                    <input required="" type="text" class="inplog6" name="apmat" id="apmat" placeholder="Ingresa tu Apellido Materno (Opcional)">
+                                    <input required="" type="text" class="inplog6" name="apmat" id="apmat" placeholder="Ingresa tu Apellido Materno (Opcional)" onkeypress="return validarn(event)">
                                 </div>
                             </div>
                             <label for="#">Sexo</label>
@@ -186,12 +229,27 @@
                             <input required="" type="email" class="inplog7" name="email" id="email" placeholder="Ingresa un correo electronico">
                             <label for="inplog8">Contraseña</label>
                             <input required="" minlength="8" maxlength="16" type="password" class="inplog8" name="password" id="password" placeholder="Ingresa una contraseña">
+                            <br>
+                            <br>
+                            
+                            <p>Acepto los</p><a href="terminoscondicionessinUser.jsp" style="color:white;">Términos y condiciones</a>
+                            <div style="margin-left:25%;">
+                            
+                            	<label>
+									<input type="radio" id="acepto" name="hola" value="acepto" style="text-align:center;" onclick="aceptnoacep()">Acepto
+								</label>
+								<label style="margin-left:95px;">
+									<input type="radio" id="noacepto" name="hola" value="noacepto" onclick="aceptnoacep()">No acepto
+								</label>
+                            </div>
+                            
+                            
                             <input type="hidden" value="2" name="tipo">
                             <div class="scentrado">
-                                <input type="submit" class="submit" name="submit">
+                                <input type="submit" class="submit" name="submit" id="enviar" disabled="true">
                             </div>
                             <br>
-                            <p>Después de Registrarte Inicia Sesión, porfavor</p>
+                            <p style="font-size:11px;">Después de Registrarte Inicia Sesión, porfavor</p>
                         </div>
 
 
@@ -200,8 +258,18 @@
             </div>
         </section>
         <footer class="footer">
-            <section>
-                <p>.</p>
+            <section class="foot">
+                <div class="terms">
+                    <a href="terminoscondicionessinUser.jsp">Terminos y condiciones</a>
+                    <br>
+                    <a href="avisoprivacidad.jsp">Politica de privacidad</a>
+                </div>
+                <div class="redes">
+                    <div class="iconall">
+                        <a href="https://www.facebook.com/HealthKnife-106283358102505"><img class="icons" src="img/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/healthknife_i/"><img class="icons" src="img/instagram.png" alt=""></a>
+                    </div>
+                </div>
             </section>
         </footer>
         

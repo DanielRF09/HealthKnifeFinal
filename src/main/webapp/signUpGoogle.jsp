@@ -29,10 +29,9 @@
                                 <a href="ControladorReceta?accion=listarindexPrincipal" class="logi" ><img src="img/logo.png" class="logo" alt=""></a>
                         </div>
                         <div class="contbotones">
-                                <a href="ControladorReceta?accion=listarindexPrincipal" class="nose" class="btn_articulos">Inicio</a>
+                                <a href="index.jsp" class="nose" class="btn_articulos">Inicio</a>
+                                <a href="BusquedaRecetas.jsp"  class="nose" class="btn_contacto">Buscar Receta</a>
                                 <a href="ControladorReceta?accion=listarindexPrincipal" class="nose" class="btn_nosotros">Recetas</a>
-                                <a href="#"  class="nose" class="btn_contacto">Servicios</a>
-                                <a href="#"  class="nose" class="btn_nosostros">Nosotros</a>
                                 <a  href="login.jsp" class="btn_login"></a>					
                         </div>
 										

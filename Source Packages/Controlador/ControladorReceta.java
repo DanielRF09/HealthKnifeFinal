@@ -29,6 +29,7 @@ public class ControladorReceta extends HttpServlet {
     String listrecetaNutriologo = "DetalleRecetaNutriologo.jsp";
     String agregar = "AgregarReceta.jsp";
     String editar = "EditarReceta.jsp";
+    String editar_nut = "EditarRecetaNut.jsp";
     Receta r = new Receta();
     RecetaDAO  recdao= new RecetaDAO();
     
@@ -150,6 +151,11 @@ public class ControladorReceta extends HttpServlet {
             request.setAttribute("idReceta", request.getParameter("idReceta"));
             acceso= editar;
             
+        }else if (action.equalsIgnoreCase("editar_nut")) {
+            
+            request.setAttribute("idReceta", request.getParameter("idReceta"));
+            acceso= editar_nut;
+            
         }else if (action.equalsIgnoreCase("listreceta")){
         
             request.setAttribute("idReceta", request.getParameter("idReceta"));
@@ -235,6 +241,72 @@ public class ControladorReceta extends HttpServlet {
             recdao.editar(r);
             
             acceso = listar;
+            
+        }else if (action.equalsIgnoreCase("ActualizarNut")) {
+            
+            int idReceta = Integer.parseInt(request.getParameter("idReceta"));
+            String nombreReceta = request.getParameter("nombreReceta");
+            String imgReceta = request.getParameter("imgReceta");
+            String descripcion = request.getParameter("descripcion");
+            int caloriasReceta = Integer.parseInt(request.getParameter("caloriasReceta"));
+            String tiempoReceta = request.getParameter("tiempoReceta");
+            Double precioReceta = Double.parseDouble(request.getParameter("precioReceta"));
+            String ingrediente1 = request.getParameter("ingrediente1");
+            String ingrediente2 = request.getParameter("ingrediente2");
+            String ingrediente3 = request.getParameter("ingrediente3");
+            String ingrediente4 = request.getParameter("ingrediente4");
+            String ingrediente5 = request.getParameter("ingrediente5");
+            String ingrediente6 = request.getParameter("ingrediente6");
+            String ingrediente7 = request.getParameter("ingrediente7");
+            String ingrediente8 = request.getParameter("ingrediente8");
+            String ingrediente9 = request.getParameter("ingrediente9");
+            String ingrediente10 = request.getParameter("ingrediente10");
+            String proceso1 = request.getParameter("proceso1");
+            String proceso2 = request.getParameter("proceso2");
+            String proceso3 = request.getParameter("proceso3");
+            String proceso4 = request.getParameter("proceso4");
+            String proceso5 = request.getParameter("proceso5");
+            String proceso6 = request.getParameter("proceso6");
+            String proceso7 = request.getParameter("proceso7");
+            String proceso8 = request.getParameter("proceso8");
+            String enfermedad = request.getParameter("enfermedad");
+            String enfermedad2 = request.getParameter("enfermedad2");
+            String enfermedad3 = request.getParameter("enfermedad3");
+            int idCategoriasRecetas = Integer.parseInt(request.getParameter("idCategoriasRecetas"));
+            
+            r.setIdReceta(idReceta);
+            r.setNombreReceta(nombreReceta);
+            r.setImgReceta(imgReceta);
+            r.setDescripcion(descripcion);
+            r.setCaloriasReceta(caloriasReceta);
+            r.setTiempoReceta(tiempoReceta);
+            r.setPrecioReceta(precioReceta);
+            r.setIngrediente1(ingrediente1);
+            r.setIngrediente2(ingrediente2);
+            r.setIngrediente3(ingrediente3);
+            r.setIngrediente4(ingrediente4);
+            r.setIngrediente5(ingrediente5);
+            r.setIngrediente6(ingrediente6);
+            r.setIngrediente7(ingrediente7);
+            r.setIngrediente8(ingrediente8);
+            r.setIngrediente9(ingrediente9);
+            r.setIngrediente10(ingrediente10);
+            r.setProceso1(proceso1);
+            r.setProceso2(proceso2);
+            r.setProceso3(proceso3);
+            r.setProceso4(proceso4);
+            r.setProceso5(proceso5);
+            r.setProceso6(proceso6);
+            r.setProceso7(proceso7);
+            r.setProceso8(proceso8);
+            r.setEnfermedad(enfermedad);
+            r.setEnfermedad2(enfermedad2);
+            r.setEnfermedad3(enfermedad3);
+            r.setIdCategoriasRecetas(idCategoriasRecetas);
+ 
+            recdao.editar(r);
+            
+            acceso = listarindexNutriologo;
             
         }else if (action.equalsIgnoreCase("eliminar")) {
             
@@ -440,6 +512,72 @@ public class ControladorReceta extends HttpServlet {
             recdao.editar(r);
             
             acceso = listar;
+            
+        }else if (action.equalsIgnoreCase("ActualizarNut")) {
+            
+            int idReceta = Integer.parseInt(request.getParameter("idReceta"));
+            String nombreReceta = request.getParameter("nombreReceta");
+            String imgReceta = request.getParameter("imgReceta");
+            String descripcion = request.getParameter("descripcion");
+            int caloriasReceta = Integer.parseInt(request.getParameter("caloriasReceta"));
+            String tiempoReceta = request.getParameter("tiempoReceta");
+            Double precioReceta = Double.parseDouble(request.getParameter("precioReceta"));
+            String ingrediente1 = request.getParameter("ingrediente1");
+            String ingrediente2 = request.getParameter("ingrediente2");
+            String ingrediente3 = request.getParameter("ingrediente3");
+            String ingrediente4 = request.getParameter("ingrediente4");
+            String ingrediente5 = request.getParameter("ingrediente5");
+            String ingrediente6 = request.getParameter("ingrediente6");
+            String ingrediente7 = request.getParameter("ingrediente7");
+            String ingrediente8 = request.getParameter("ingrediente8");
+            String ingrediente9 = request.getParameter("ingrediente9");
+            String ingrediente10 = request.getParameter("ingrediente10");
+            String proceso1 = request.getParameter("proceso1");
+            String proceso2 = request.getParameter("proceso2");
+            String proceso3 = request.getParameter("proceso3");
+            String proceso4 = request.getParameter("proceso4");
+            String proceso5 = request.getParameter("proceso5");
+            String proceso6 = request.getParameter("proceso6");
+            String proceso7 = request.getParameter("proceso7");
+            String proceso8 = request.getParameter("proceso8");
+            String enfermedad = request.getParameter("enfermedad");
+            String enfermedad2 = request.getParameter("enfermedad2");
+            String enfermedad3 = request.getParameter("enfermedad3");
+            int idCategoriasRecetas = Integer.parseInt(request.getParameter("idCategoriasRecetas"));
+            
+            r.setIdReceta(idReceta);
+            r.setNombreReceta(nombreReceta);
+            r.setImgReceta(imgReceta);
+            r.setDescripcion(descripcion);
+            r.setCaloriasReceta(caloriasReceta);
+            r.setTiempoReceta(tiempoReceta);
+            r.setPrecioReceta(precioReceta);
+            r.setIngrediente1(ingrediente1);
+            r.setIngrediente2(ingrediente2);
+            r.setIngrediente3(ingrediente3);
+            r.setIngrediente4(ingrediente4);
+            r.setIngrediente5(ingrediente5);
+            r.setIngrediente6(ingrediente6);
+            r.setIngrediente7(ingrediente7);
+            r.setIngrediente8(ingrediente8);
+            r.setIngrediente9(ingrediente9);
+            r.setIngrediente10(ingrediente10);
+            r.setProceso1(proceso1);
+            r.setProceso2(proceso2);
+            r.setProceso3(proceso3);
+            r.setProceso4(proceso4);
+            r.setProceso5(proceso5);
+            r.setProceso6(proceso6);
+            r.setProceso7(proceso7);
+            r.setProceso8(proceso8);
+            r.setEnfermedad(enfermedad);
+            r.setEnfermedad2(enfermedad2);
+            r.setEnfermedad3(enfermedad3);
+            r.setIdCategoriasRecetas(idCategoriasRecetas);
+ 
+            recdao.editar(r);
+            
+            acceso = listarindexNutriologo;
             
         }else if (action.equalsIgnoreCase("eliminar")) {
             

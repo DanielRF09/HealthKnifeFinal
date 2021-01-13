@@ -23,6 +23,7 @@ public class ControladorBlog extends HttpServlet {
     String listarUsuarios = "BlogUsuarios.jsp";
     String listarNutriologos = "BlogNutriologos.jsp";
     String editar = "EditarBlog.jsp";
+    String editar_nut = "EditarBlogNut.jsp";
     
     Blog b = new Blog();
     BlogDAO  blodao= new BlogDAO();
@@ -88,6 +89,11 @@ public class ControladorBlog extends HttpServlet {
             request.setAttribute("idBlog", request.getParameter("idBlog"));
             acceso= editar;
             
+        }else if (action.equalsIgnoreCase("editar_nut")) {
+            
+            request.setAttribute("idBlog", request.getParameter("idBlog"));
+            acceso= editar_nut;
+            
         }else if (action.equalsIgnoreCase("Actualizar")) {
             
             int idBlog = Integer.parseInt(request.getParameter("idBlog"));
@@ -103,6 +109,22 @@ public class ControladorBlog extends HttpServlet {
             blodao.editar(b);
             
             acceso = listar;
+            
+        }else if (action.equalsIgnoreCase("ActualizarNut")) {
+            
+            int idBlog = Integer.parseInt(request.getParameter("idBlog"));
+            String imgBlog = request.getParameter("imgBlog");
+            String tituloBlog = request.getParameter("tituloBlog");
+            String cuerpoBlog = request.getParameter("cuerpoBlog");
+            
+            b.setIdBlog(idBlog);
+            b.setImgBlog(imgBlog);
+            b.setTituloBlog(tituloBlog);
+            b.setCuerpoBlog(cuerpoBlog);
+ 
+            blodao.editar(b);
+            
+            acceso = listarNutriologos;
             
         }else if (action.equalsIgnoreCase("eliminar")) {
             
@@ -166,6 +188,11 @@ public class ControladorBlog extends HttpServlet {
             request.setAttribute("idBlog", request.getParameter("idBlog"));
             acceso= editar;
             
+        }else if (action.equalsIgnoreCase("editar_nut")) {
+            
+            request.setAttribute("idBlog", request.getParameter("idBlog"));
+            acceso= editar_nut;
+            
         }else if (action.equalsIgnoreCase("Actualizar")) {
             
             int idBlog = Integer.parseInt(request.getParameter("idBlog"));
@@ -181,6 +208,22 @@ public class ControladorBlog extends HttpServlet {
             blodao.editar(b);
             
             acceso = listar;
+            
+        }else if (action.equalsIgnoreCase("ActualizarNut")) {
+            
+            int idBlog = Integer.parseInt(request.getParameter("idBlog"));
+            String imgBlog = request.getParameter("imgBlog");
+            String tituloBlog = request.getParameter("tituloBlog");
+            String cuerpoBlog = request.getParameter("cuerpoBlog");
+            
+            b.setIdBlog(idBlog);
+            b.setImgBlog(imgBlog);
+            b.setTituloBlog(tituloBlog);
+            b.setCuerpoBlog(cuerpoBlog);
+ 
+            blodao.editar(b);
+            
+            acceso = listarNutriologos;
             
         }else if (action.equalsIgnoreCase("eliminar")) {
             

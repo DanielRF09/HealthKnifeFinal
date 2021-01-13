@@ -733,6 +733,36 @@ public class RecetaDAO implements CRUDRecetas{
         
         return false;
     }
+    
+    @Override
+    public boolean editar_nut(Receta rec) {
+        
+        //Variables de conexion BD
+        Conexion cn = new Conexion();
+        Connection con;
+        PreparedStatement ps;
+        ResultSet rs;
+        String sql = "CALL actualizarRec("+rec.getIdReceta()+", '"+rec.getNombreReceta()+"', '"+rec.getImgReceta()+"', '"+rec.getDescripcion()+"', "+rec.getCaloriasReceta()+", '"+rec.getTiempoReceta()+"', "+rec.getPrecioReceta()+", '"+rec.getIngrediente1()+"', '"+rec.getIngrediente2()+"', '"+rec.getIngrediente3()+"', '"+rec.getIngrediente4()+"', '"+rec.getIngrediente5()+"', '"+rec.getIngrediente6()+"', '"+rec.getIngrediente7()+"', '"+rec.getIngrediente8()+"', '"+rec.getIngrediente9()+"', '"+rec.getIngrediente10()+"', '"+rec.getProceso1()+"', '"+rec.getProceso2()+"', '"+rec.getProceso3()+"', '"+rec.getProceso4()+"', '"+rec.getProceso5()+"', '"+rec.getProceso6()+"', '"+rec.getProceso7()+"', '"+rec.getProceso8()+"', '"+rec.getEnfermedad()+"', '"+rec.getEnfermedad2()+"', '"+rec.getEnfermedad3()+"', "+rec.getIdCategoriasRecetas()+" )";
+        
+        try {
+            
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+            
+            //Cerramos conexiones
+                con.close();
+                ps.close();
+               
+            
+        } catch (Exception e) {
+        
+            System.err.println("Error: "+e);
+        
+        }
+        
+        return false;
+    }
 
     @Override
     public boolean eliminar(int idReceta) {

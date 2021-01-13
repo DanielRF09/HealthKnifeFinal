@@ -52,9 +52,10 @@ public class UsuarioDAO implements CRUDUsuarios{
             }
             
             //Cerramos conexiones
-                con.close();
-                ps.close();
-                rs.close();
+                
+            con.close();
+            ps.close();
+            rs.close();
             
         }catch (Exception e){
         
@@ -95,9 +96,10 @@ public class UsuarioDAO implements CRUDUsuarios{
             }
             
             //Cerramos conexiones
-                con.close();
-                ps.close();
-                rs.close();
+                
+            con.close();
+            ps.close();
+            rs.close();
             
         }catch (Exception e){
         

@@ -87,7 +87,7 @@
         
         <script type="text/javascript" src="js/validacionreg.js"></script>
     </head>
-    <body>
+    <body oncopy="return false" onpaste="return false">
         
         <%
             HttpSession sesionOk = request.getSession();
@@ -151,7 +151,7 @@
                 <input type="text" class="controls" name="apmatAdmin" id="apmatAdmin" value="<%= adm.getApmatAdmin()%>" placeholder="Ingrese el apellido materno" required minlength="1" maxlength="44" onkeypress="return validarn(event)">
                 <input type="date" class="controls" name="fechaAdmin" id="fechaAdmin" value="<%= adm.getFechaAdmin()%>" required>
                 <input type="text" class="controls" name="telefonoAdmin" id="telefonoAdmin" value="<%= adm.getTelefonoAdmin()%>" placeholder="Ingrese el telefono" required minlength="10" maxlength="10" onkeypress="return validarcp(event)">
-                <input type="text" class="controls" name="userAdmin" id="userAdmin" value="<%= adm.getUserAdmin()%>" placeholder="Ingrese su nombre de usuario" required minlength="6" maxlength="44">
+                <input type="hidden" class="controls" name="userAdmin" id="userAdmin" value="<%= adm.getUserAdmin()%>" placeholder="Ingrese su nombre de usuario" required minlength="6" maxlength="44">
                 <input type="hidden" name="idAdministrador" id="idAdministrador" value="<%= adm.getIdAdministrador() %>">
                 
                 <input type="submit" class="botones" name="accion" value="Actualizar">

@@ -202,7 +202,7 @@ public class BlogDAO implements CrudBlog{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
         } catch (Exception e) {
@@ -217,6 +217,36 @@ public class BlogDAO implements CrudBlog{
 
     @Override
     public boolean editar(Blog blo) {
+        
+        //Variables de conexion BD
+        Conexion cn = new Conexion();
+        Connection con;
+        PreparedStatement ps;
+        ResultSet rs;
+        String sql = "UPDATE Blog SET imgBlog = '"+blo.getImgBlog()+"', tituloBlog = '"+blo.getTituloBlog()+"', cuerpoBlog = '"+blo.getCuerpoBlog()+"' WHERE idBlog = "+blo.getIdBlog()+"";
+        
+        try {
+            
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+            
+            //Cerramos conexiones
+                
+                ps.close();
+                
+            
+        } catch (Exception e) {
+        
+            System.err.println("Error: "+e);
+        
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public boolean editar_nut(Blog blo) {
         
         //Variables de conexion BD
         Conexion cn = new Conexion();

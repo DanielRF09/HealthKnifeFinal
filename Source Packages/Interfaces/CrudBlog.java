@@ -13,5 +13,6 @@ public interface CrudBlog {
     public Blog list(int idBlog);
     public boolean agregar(Blog blo);
     public boolean editar(Blog blo);
+    public boolean editar_nut(Blog blo);
     public boolean eliminar(int idBlog);
 }

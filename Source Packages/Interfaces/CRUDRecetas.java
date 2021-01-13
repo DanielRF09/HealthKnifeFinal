@@ -18,5 +18,6 @@ public interface CRUDRecetas {
     public Receta listrecetaNutriologo(int idReceta);
     public boolean agregar(Receta rec);
     public boolean editar(Receta rec);
+    public boolean editar_nut(Receta rec);
     public boolean eliminar(int idReceta);
 }

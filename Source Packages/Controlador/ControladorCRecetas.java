@@ -68,6 +68,14 @@ public class ControladorCRecetas extends HttpServlet {
             request.setAttribute("idReceta", request.getParameter("idReceta"));
             acceso= listrecetaGuardada;
             
+        }else if(action.equalsIgnoreCase("eliminar")){
+        	
+        	int idCRecetas = Integer.parseInt(request.getParameter("idCRecetas"));
+        	cre.setIdCRecetas(idCRecetas);
+        	recdao.eliminar(idCRecetas);
+        	
+        	acceso = recetasGuardadas;
+        	
         }
         
         RequestDispatcher vista = request.getRequestDispatcher(acceso);
@@ -106,6 +114,14 @@ public class ControladorCRecetas extends HttpServlet {
             request.setAttribute("idReceta", request.getParameter("idReceta"));
             acceso= listrecetaGuardada;
             
+        }else if(action.equalsIgnoreCase("eliminar")){
+        	
+        	int idCRecetas = Integer.parseInt(request.getParameter("idCRecetas"));
+        	cre.setIdCRecetas(idCRecetas);
+        	recdao.eliminar(idCRecetas);
+        	
+        	acceso = recetasGuardadas;
+        	
         }
         
         RequestDispatcher vista = request.getRequestDispatcher(acceso);

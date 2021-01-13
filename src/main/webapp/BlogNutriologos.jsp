@@ -49,7 +49,7 @@
                             <a href="ControladorReceta?accion=listarindexNutriologo"  class="nose" class="btn_contacto">Recetas</a>
                             <a href="ControladorBlog?accion=listarNutriologos" class="nose" class="btn_nosotros">Blog</a>
                             <a href="https://healtknifechat.herokuapp.com/" class="nose" class="btn_nosotros">Chat</a>
-                            <a href="nosotros.html"  class="nose" class="btn_nosostros">Nosotros</a>
+                            
                             				
                             <a href="cerrarSesion.jsp"  class="nose" class="btn_nosostros">Cerrar Sesion</a>
                         </div>
@@ -87,43 +87,51 @@
                                     
                             %>
                             
-				<li class="receta">
-					<div class="contreceta">
-                                            <div class="imgreceta"><a href="#"><img class="imgrecet" src="<%= blo.getImgBlog() %>" alt=""></a></div>
-						<div class="descripcionreceta">
-							<div class="conttitulo">
-								<h3 class="titulo"><%= blo.getTituloBlog() %></h3>
-						
-							</div>
-							<div class="contdescr">							
-								<p class="descr"><%= blo.getCuerpoBlog() %> </p>
-							</div>
-						
-						</div>
-						
-					</div>
-				</li>
+								<li class="receta">
+									<div class="contreceta">
+				                                            <div class="imgreceta"><a href="#"><img class="imgrecet" src="<%= blo.getImgBlog() %>" alt=""></a></div>
+										<div class="descripcionreceta">
+											<div class="conttitulo">
+												<h3 class="titulo"><%= blo.getTituloBlog() %></h3>
+												<a href="ControladorBlog?accion=editar_nut&idBlog=<%= blo.getIdBlog()%>" class="enlacereceta">Editar</a>
+											</div>
+											
+											<div class="contdescr">							
+												<p class="descr" style="text-align: justify; text-size:12px;"><%= blo.getCuerpoBlog() %> </p>
+												
+											</div>
+											
+										
+										</div>
+										
+									</div>
+								</li>
                                 
                             <%}%>
 				
+				
 			</ul>
+			
 		
 	</section>
+	
 
 	<footer class="footer">
+	<br>
+		<br>
 		<section class="foot">
-			<div class="terms">
-				<a href="#">Terminos y condiciones</a>
-				<br>
-				<a href="#">Politica de privacidad</a>
-			</div>
-			<div class="redes">
-				<div class="iconall">
-				<a href="#"><img class="icons" src="img/facebook.png" alt=""></a>
-				<a href="#"><img class="icons" src="img/instagram.png" alt=""></a>
-				</div>
-			</div>
-		</section>
+                <div class="terms">
+                    <a href="terminoscondicionessinUser.jsp">Terminos y condiciones</a>
+                    <br>
+                    <a href="avisoprivacidad.jsp">Politica de privacidad</a>
+                </div>
+                <div class="redes">
+                    <div class="iconall">
+                        <a href="https://www.facebook.com/HealthKnife-106283358102505"><img class="icons" src="img/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/healthknife_i/"><img class="icons" src="img/instagram.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
 	</footer>
 	<script src="js/jquery.min.js"></script>
         

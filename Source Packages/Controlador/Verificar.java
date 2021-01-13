@@ -130,14 +130,28 @@ public class Verificar extends HttpServlet {
                 System.out.println("NO SE REGISTRÓ ESTE USUARIO");
                 try (PrintWriter out = response.getWriter()) {
                     /* TODO output your page here. You may use following sample code. */
+                    
                     out.println("<!DOCTYPE html>");
                     out.println("<html>");
                     out.println("<head>");
-                    out.println("<title>Registro</title>");
+                    out.println("<meta charset=\"UTF-8\">");
+                    out.println("<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">");
+                    out.println("<link href=\"https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700&display=swap\" rel=\"stylesheet\">");
+                    out.println("<link rel=\"stylesheet\" href=\"css/estilospaginaerrores.css\">");
+                    out.println("<title>Registro Error</title>");
                     out.println("</head>");
                     out.println("<body>");
-                    out.println("<h1>Lo sentimos, ese CORREO y/o UserName ya esta en uso</h1>");
+                    out.println("<section class=\"main\">");
+                    out.println("<br>");
+                    out.println("<br>");
+                    out.println("<h2>Error al Registrarse</h2>");
+                    out.println("<div class=\"Parrafo\" style=\"width:300px; margin-left:auto; margin-right:auto; color:white;\">");
+                    out.println("<p style=\"font-size: 20px;\">Lo sentimos, ese CORREO y/o UserName ya esta en uso</p>");
+                    out.println("<br>");
+                    out.println("<br>");
                     out.println("<a href='index.jsp'>Regresar</a>");
+                    out.println("</div>");
+                    out.println("</section>");
                     out.println("</body>");
                     out.println("</html>");
                 }
@@ -211,11 +225,24 @@ public class Verificar extends HttpServlet {
                     out.println("<!DOCTYPE html>");
                     out.println("<html>");
                     out.println("<head>");
-                    out.println("<title>Registro</title>");
+                    out.println("<meta charset=\"UTF-8\">");
+                    out.println("<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">");
+                    out.println("<link href=\"https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700&display=swap\" rel=\"stylesheet\">");
+                    out.println("<link rel=\"stylesheet\" href=\"css/estilospaginaerrores.css\">");
+                    out.println("<title>Registro Error</title>");
                     out.println("</head>");
                     out.println("<body>");
-                    out.println("<h1>Este UserName ya esta en uso, intenta con otro</h1>");
+                    out.println("<section class=\"main\">");
+                    out.println("<br>");
+                    out.println("<br>");
+                    out.println("<h2>Error al Registrarse</h2>");
+                    out.println("<div class=\"Parrafo\" style=\"width:300px; margin-left:auto; margin-right:auto; color:white;\">");
+                    out.println("<p style=\"font-size: 20px;\">Este UserName ya esta en uso, intenta con otro</p>");
+                    out.println("<br>");
+                    out.println("<br>");
                     out.println("<a href='signUpGoogle.jsp'>Regresar</a>");
+                    out.println("</div>");
+                    out.println("</section>");
                     out.println("</body>");
                     out.println("</html>");
                 }

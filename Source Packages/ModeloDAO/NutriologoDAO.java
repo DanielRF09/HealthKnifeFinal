@@ -52,9 +52,10 @@ public class NutriologoDAO implements CRUDNutriologos{
             }
             
             //Cerramos conexiones
-                con.close();
-                ps.close();
-                rs.close();
+                
+            con.close();
+            ps.close();
+            rs.close();
             
         }catch (Exception e){
         
@@ -95,9 +96,10 @@ public class NutriologoDAO implements CRUDNutriologos{
             }
             
             //Cerramos conexiones
-                con.close();
-                ps.close();
-                rs.close();
+                
+            con.close();
+            ps.close();
+            rs.close();
             
         }catch (Exception e){
         
@@ -123,7 +125,7 @@ public class NutriologoDAO implements CRUDNutriologos{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
             
@@ -156,7 +158,7 @@ public class NutriologoDAO implements CRUDNutriologos{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
             

@@ -112,18 +112,18 @@
 
 	<footer class="footer">
 		<section class="foot">
-			<div class="terms">
-				<a href="terminoscondiciones.jsp">Términos y condiciones</a>
-				<br>
-				<a href="#">Politica de privacidad</a>
-			</div>
-			<div class="redes">
-				<div class="iconall">
-				<a href="#"><img class="icons" src="img/facebook.png" alt=""></a>
-				<a href="#"><img class="icons" src="img/instagram.png" alt=""></a>
-				</div>
-			</div>
-		</section>
+                <div class="terms">
+                    <a href="terminoscondiciones.jsp">Terminos y condiciones</a>
+                    <br>
+                    <a href="avisoprivacidad.jsp">Politica de privacidad</a>
+                </div>
+                <div class="redes">
+                    <div class="iconall">
+                        <a href="https://www.facebook.com/HealthKnife-106283358102505"><img class="icons" src="img/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/healthknife_i/"><img class="icons" src="img/instagram.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
 	</footer>
 	<script src="js/jquery.min.js"></script>
         

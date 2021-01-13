@@ -56,7 +56,7 @@
                             <a href="ControladorReceta?accion=listarindexNutriologo"  class="nose" class="btn_contacto">Recetas</a>
                             <a href="ControladorBlog?accion=listarNutriologos" class="nose" class="btn_nosotros">Blog</a>
                             <a href="https://healtknifechat.herokuapp.com/" class="nose" class="btn_nosotros">Chat</a>
-                            <a href="nosotros.html"  class="nose" class="btn_nosostros">Nosotros</a>
+                            
                             				
                             <a href="cerrarSesion.jsp"  class="nose" class="btn_nosostros">Cerrar Sesion</a>
                         </div>
@@ -331,18 +331,18 @@
 	</section>
         <footer class="footer">
 		<section class="foot">
-			<div class="terms">
-				<a href="#">Terminos y condiciones</a>
-				<br>
-				<a href="#">Politica de privacidad</a>
-			</div>
-			<div class="redes">
-				<div class="iconall">
-				<a href="#"><img class="icons" src="img/facebook.png" alt=""></a>
-				<a href="#"><img class="icons" src="img/instagram.png" alt=""></a>
-				</div>
-			</div>
-		</section>
+                <div class="terms">
+                    <a href="terminoscondicionessinUser.jsp">Terminos y condiciones</a>
+                    <br>
+                    <a href="avisoprivacidad.jsp">Politica de privacidad</a>
+                </div>
+                <div class="redes">
+                    <div class="iconall">
+                        <a href="https://www.facebook.com/HealthKnife-106283358102505"><img class="icons" src="img/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/healthknife_i/"><img class="icons" src="img/instagram.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
 	</footer>
     </body>
 </html>

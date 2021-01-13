@@ -88,7 +88,7 @@
         
         <script type="text/javascript" src="js/validacionreg.js"></script>
     </head>
-    <body>
+    <body oncopy="return false" onpaste="return false">
         
         <%
             HttpSession sesionOk = request.getSession();

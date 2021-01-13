@@ -129,9 +129,6 @@
                     <th class="thead-blue" scope="col">Sexo</th>
                     <th class="thead-blue" scope="col">Fecha</th>
                     <th class="thead-blue" scope="col">Télefono</th>
-                    <th class="thead-blue" scope="col">Correo</th>
-                    <th class="thead-blue" scope="col">Usuario</th>
-                    <th class="thead-blue" scope="col">Contraseña</th>
                     <th class="thead-blue" scope="col">Tipo Usuario</th>
                     <th class="thead-blue" scope="col">Acción</th>
                     
@@ -158,9 +155,6 @@
                         <td><%= nut.getSexoNutriologo()%></td>
                         <td><%= nut.getFechaNutriologo()%></td>
                         <td><%= nut.getTelefonoNutriologo()%></td>
-                        <td><%= nut.getCorreoNutriologo()%></td>
-                        <td><%= nut.getUserNutriologo()%></td>
-                        <td><%= nut.getPasswordNutriologo()%></td>
                         <td><%= nut.getIdTipoUsuario()%></td>
                         
    
@@ -194,18 +188,18 @@
 
 	<footer class="footer">
 		<section class="foot">
-			<div class="terms">
-				<a href="#">Terminos y condiciones</a>
-				<br>
-				<a href="#">Politica de privacidad</a>
-			</div>
-			<div class="redes">
-				<div class="iconall">
-				<a href="#"><img class="icons" src="img/facebook.png" alt=""></a>
-				<a href="#"><img class="icons" src="img/instagram.png" alt=""></a>
-				</div>
-			</div>
-		</section>
+                <div class="terms">
+                    <a href="terminoscondicionessinUser.jsp">Terminos y condiciones</a>
+                    <br>
+                    <a href="avisoprivacidad.jsp">Politica de privacidad</a>
+                </div>
+                <div class="redes">
+                    <div class="iconall">
+                        <a href="https://www.facebook.com/HealthKnife-106283358102505"><img class="icons" src="img/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/healthknife_i/"><img class="icons" src="img/instagram.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
 	</footer>
         
 	<script src="js/jquery.min.js"></script>

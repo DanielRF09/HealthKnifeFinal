@@ -88,7 +88,7 @@
         
         <script type="text/javascript" src="js/validacionreg.js"></script>
     </head>
-    <body>
+    <body oncopy="return false" onpaste="return false">
         
         <%
             HttpSession sesionOk = request.getSession();
@@ -154,7 +154,7 @@
                 <input type="date" class="controls" name="fechaNutriologo" id="fechaNutriologo" value="<%= nut.getFechaNutriologo()%>" required>
                 <input type="text" class="controls" name="telefonoNutriologo" id="telefonoNutriologo" value="<%= nut.getTelefonoNutriologo()%>" placeholder="Ingrese el telefono" required minlength="10" maxlength="10" onkeypress="return validarcp(event)">
                 
-                <input type="text" class="controls" name="userNutriologo" id="userNutriologo" value="<%= nut.getUserNutriologo()%>" placeholder="Ingrese su nombre de usuario" required minlength="6" maxlength="44">
+                <input type="hidden" class="controls" name="userNutriologo" id="userNutriologo" value="<%= nut.getUserNutriologo()%>" placeholder="Ingrese su nombre de usuario" required minlength="6" maxlength="44">
                 
                 <input type="hidden" name="idNutriologo" id="idNutriologo" value="<%= nut.getIdNutriologo() %>">
                 

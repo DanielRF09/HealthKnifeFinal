@@ -60,7 +60,7 @@ public class CRecetasDAO implements ICRecetas{
         ResultSet rs;
         ArrayList<CRecetas>list = new ArrayList<>();
         
-        String sql = "Select r.nombreReceta AS Receta, u.userUsuario, rel.idUsuario, r.idReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta,"
+        String sql = "Select r.nombreReceta AS Receta, idCRecetas, u.userUsuario, rel.idUsuario, r.idReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta,"
                 + " r.ingrediente1, r.ingrediente2, r.ingrediente3, r.ingrediente4, r.ingrediente5, r.ingrediente6, r.ingrediente7, r.ingrediente8, r.ingrediente9, r.ingrediente10,"
                 + " r.proceso1, r.proceso2, r.proceso3, r.proceso4, r.proceso5, r.proceso6, r.proceso7, r.proceso8, r.enfermedad, r.enfermedad2, r.enfermedad3 From receta AS r INNER JOIN crecetas AS rel ON r.idReceta = rel.idReceta INNER JOIN usuario AS u ON u.idUsuario = rel.idUsuario WHERE u.idUsuario="+idUsuario;
         
@@ -78,6 +78,7 @@ public class CRecetasDAO implements ICRecetas{
                 
                 
                 cre.setReceta(rs.getString("Receta"));
+                cre.setIdCRecetas(rs.getInt("idCRecetas"));
                 cre.setUserUsuario(rs.getString("userUsuario"));
                 cre.setIdUsuario(rs.getInt("idUsuario"));
                 cre.setIdReceta(rs.getInt("idReceta"));
@@ -135,7 +136,7 @@ public class CRecetasDAO implements ICRecetas{
         Connection con;
         PreparedStatement ps;
         ResultSet rs;
-        String sql = "Select r.nombreReceta AS Receta, u.userUsuario, rel.idUsuario, r.idReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, "
+        String sql = "Select r.nombreReceta AS Receta, idCRecetas, u.userUsuario, rel.idUsuario, r.idReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, "
                 + " r.ingrediente1, r.ingrediente2, r.ingrediente3, r.ingrediente4, r.ingrediente5, r.ingrediente6, r.ingrediente7, r.ingrediente8, r.ingrediente9, r.ingrediente10,"
                 + " r.proceso1, r.proceso2, r.proceso3, r.proceso4, r.proceso5, r.proceso6, r.proceso7, r.proceso8, r.enfermedad, r.enfermedad2, r.enfermedad3 From receta AS r INNER JOIN crecetas AS rel ON r.idReceta = rel.idReceta INNER JOIN usuario AS u ON u.idUsuario = rel.idUsuario WHERE r.idReceta="+idReceta;
         try{
@@ -148,6 +149,7 @@ public class CRecetasDAO implements ICRecetas{
             
                 cr.setIdReceta(rs.getInt("idReceta"));
                 cr.setReceta(rs.getString("Receta"));
+                cr.setIdCRecetas(rs.getInt("idCRecetas"));
                 cr.setUserUsuario(rs.getString("userUsuario"));
                 cr.setIdUsuario(rs.getInt("idUsuario"));
                 cr.setImgReceta(rs.getString("imgReceta"));
@@ -188,6 +190,37 @@ public class CRecetasDAO implements ICRecetas{
             System.out.println("Error: "+ e);
         }
         return cr;
+    }
+    
+    @Override
+    public boolean eliminar(int idCRecetas) {
+        
+        //Variables de conexion BD
+        Conexion cn = new Conexion();
+        Connection con;
+        PreparedStatement ps;
+        ResultSet rs;
+        String sql = "DELETE FROM crecetas where idCRecetas="+idCRecetas;
+        
+         try {
+            
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+            
+            //Cerramos conexiones
+                con.close();
+                ps.close();
+                
+            
+        } catch (Exception e) {
+            
+            System.err.println("Error: " + e);
+            
+        }
+        
+        
+        return false;
     }
     
 }

@@ -88,7 +88,7 @@
         
         <script type="text/javascript" src="js/validacionreg.js"></script>
     </head>
-    <body>
+    <body oncopy="return false" onpaste="return false">
         
         <%
             HttpSession sesionOk = request.getSession();
@@ -153,7 +153,7 @@
                 <input type="text" class="controls" name="apmatUsuario" id="apmatUsuario" placeholder="Ingrese el apellido materno" value="<%= usu.getApmatUsuario() %>" required minlength="1" maxlength="44" onkeypress="return validarn(event)">
                 <input type="text" class="controls" name="sexoUsuario" id="sexoUsuario" placeholder="Ingrese el sexo" value="<%= usu.getSexoUsuario() %>" required minlength="1" maxlength="1" onkeypress="return validarn(event)">
                 <input type="date" class="controls" name="fechaUsuario" id="fechaUsuario" value="<%= usu.getFechaUsuario() %>" required> 
-                <input type="text" class="controls" name="userUsuario" id="userUsuario" placeholder="Ingrese su nombre de usuario" value="<%= usu.getUserUsuario() %>" required minlength="6" maxlength="44">
+                <input type="hidden" class="controls" name="userUsuario" id="userUsuario" placeholder="Ingrese su nombre de usuario" value="<%= usu.getUserUsuario() %>" required minlength="6" maxlength="44">
                 <input type="hidden" name="idUsuario" id="idUsuario" value="<%= usu.getIdUsuario() %>">
                 
                 <input type="submit" class="botones" name="accion" value="Actualizar">
