@@ -53,7 +53,7 @@ public class UsuarioDAO implements CRUDUsuarios{
             
             //Cerramos conexiones
                 
-            con.close();
+            
             ps.close();
             rs.close();
             
@@ -97,7 +97,7 @@ public class UsuarioDAO implements CRUDUsuarios{
             
             //Cerramos conexiones
                 
-            con.close();
+           
             ps.close();
             rs.close();
             
@@ -126,7 +126,7 @@ public class UsuarioDAO implements CRUDUsuarios{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
             
@@ -157,7 +157,7 @@ public class UsuarioDAO implements CRUDUsuarios{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
             
@@ -185,7 +185,7 @@ public class UsuarioDAO implements CRUDUsuarios{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
             

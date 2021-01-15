@@ -53,7 +53,7 @@ public class NutriologoDAO implements CRUDNutriologos{
             
             //Cerramos conexiones
                 
-            con.close();
+           
             ps.close();
             rs.close();
             
@@ -97,7 +97,7 @@ public class NutriologoDAO implements CRUDNutriologos{
             
             //Cerramos conexiones
                 
-            con.close();
+           
             ps.close();
             rs.close();
             
@@ -186,7 +186,7 @@ public class NutriologoDAO implements CRUDNutriologos{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
             

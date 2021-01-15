@@ -49,7 +49,7 @@ public class BlogDAO implements CrudBlog{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -92,7 +92,7 @@ public class BlogDAO implements CrudBlog{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -135,7 +135,7 @@ public class BlogDAO implements CrudBlog{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -173,7 +173,7 @@ public class BlogDAO implements CrudBlog{
             }
             
             //Cerramos conexiones
-                con.close();
+               
                 ps.close();
                 rs.close();
             
@@ -262,7 +262,7 @@ public class BlogDAO implements CrudBlog{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+               
                 ps.close();
                 
             
@@ -290,7 +290,7 @@ public class BlogDAO implements CrudBlog{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+             
                 ps.close();
                
             

@@ -75,7 +75,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -136,7 +136,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -197,7 +197,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -257,7 +257,7 @@ public class RecetaDAO implements CRUDRecetas{
 
             }
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -318,7 +318,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -379,7 +379,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -451,7 +451,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -521,7 +521,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -591,7 +591,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -661,7 +661,7 @@ public class RecetaDAO implements CRUDRecetas{
             }
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 rs.close();
             
@@ -721,7 +721,7 @@ public class RecetaDAO implements CRUDRecetas{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                
             
@@ -751,7 +751,7 @@ public class RecetaDAO implements CRUDRecetas{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                
             
@@ -779,7 +779,7 @@ public class RecetaDAO implements CRUDRecetas{
             ps.executeUpdate();
             
             //Cerramos conexiones
-                con.close();
+                
                 ps.close();
                 
             

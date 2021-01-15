@@ -11,7 +11,7 @@ public class Conexion {
     public Conexion(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://bejjth2bbmwh0cshchxb-mysql.services.clever-cloud.com:20167/bejjth2bbmwh0cshchxb","uqwfhl8r7awjda0e","VGeitQLrJIc7bpUkm7Xw");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_healthknife","root","n0m3l0");
             
             
         }catch (Exception e){

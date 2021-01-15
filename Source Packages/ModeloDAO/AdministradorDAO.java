@@ -52,7 +52,7 @@ public class AdministradorDAO implements CRUDAdministradores {
             }
             //Cerramos conexiones
                 
-            con.close();
+           
             ps.close();
             rs.close();
             
@@ -90,7 +90,7 @@ public class AdministradorDAO implements CRUDAdministradores {
             
             //Cerramos conexiones
                 
-            con.close();
+            
             ps.close();
             rs.close();
             
