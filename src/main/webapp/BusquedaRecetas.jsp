@@ -143,21 +143,21 @@
             trans = request.getParameter("transtenf");
             if (trans.equals("Enfermedad/Transtorno") || trans.equals("Ninguno")) {
                 //System.out.println("Si funciona uwu");
-                transtorno = "WHERE (enfermedad LIKE '%anorexia%' or enfermedad LIKE '%bulimia%' or enfermedad LIKE '%sobrepeso%' or enfermedad LIKE '%trastorno alimentario compulsivo%' or enfermedad LIKE '%transtorno de rumiación%' or enfermedad LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedad LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedad LIKE '%trastorno de rumiación%' or enfermedad LIKE '%transtorno alimentario compulsivo%')";    
+                transtorno = "WHERE (enfermedades LIKE '%anorexia%' or enfermedades LIKE '%bulimia%' or enfermedades LIKE '%sobrepeso%' or enfermedades LIKE '%trastorno alimentario compulsivo%' or enfermedades LIKE '%transtorno de rumiación%' or enfermedades LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%trastorno de rumiación%' or enfermedades LIKE '%transtorno alimentario compulsivo%')";    
             } else if(trans.equals("Anorexia")){
-                transtorno = "WHERE (enfermedad LIKE '%anorexia%' or enfermedad2 LIKE '%anorexia%' or enfermedad3 LIKE '%anorexia%')";
+                transtorno = "WHERE (enfermedades LIKE '%anorexia%' or enfermedades LIKE '%anorexia%' or enfermedades LIKE '%anorexia%')";
             } else if(trans.equals("Bulimia")){
-                transtorno = "WHERE (enfermedad LIKE '%bulimia%' or enfermedad2 LIKE '%bulimia%' or enfermedad3 LIKE '%bulimia%')";
+                transtorno = "WHERE (enfermedades LIKE '%bulimia%' or enfermedades LIKE '%bulimia%' or enfermedades LIKE '%bulimia%')";
             } else if(trans.equals("Sobrepeso")){
-                transtorno = "WHERE (enfermedad LIKE '%sobrepeso%' or enfermedad2 LIKE '%sobrepeso%' or enfermedad3 LIKE '%sobrepeso%')";
+                transtorno = "WHERE (enfermedades LIKE '%sobrepeso%' or enfermedades LIKE '%sobrepeso%' or enfermedades LIKE '%sobrepeso%')";
             } else if(trans.equals("Transtorno alimentario compulsivo")){
-                transtorno = "WHERE (enfermedad LIKE '%trastorno alimentario compulsivo%' or enfermedad2 LIKE '%trastorno alimentario compulsivo%' or enfermedad3 LIKE '%trastorno alimentario compulsivo%' or enfermedad LIKE '%transtorno alimentario compulsivo%' or enfermedad2 LIKE '%transtorno alimentario compulsivo%' or enfermedad3 LIKE '%transtorno alimentario compulsivo%')";
+                transtorno = "WHERE (enfermedades LIKE '%trastorno alimentario compulsivo%' or enfermedades LIKE '%trastorno alimentario compulsivo%' or enfermedades LIKE '%trastorno alimentario compulsivo%' or enfermedades LIKE '%transtorno alimentario compulsivo%' or enfermedades LIKE '%transtorno alimentario compulsivo%' or enfermedades LIKE '%transtorno alimentario compulsivo%')";
             } else if(trans.equals("Transtorno de rumiación")){
-                transtorno = "WHERE (enfermedad LIKE '%transtorno de rumiación%' or enfermedad2 LIKE '%transtorno de rumiación%' or enfermedad3 LIKE '%transtorno de rumiación%' or enfermedad LIKE '%trastorno de rumiación%' or enfermedad2 LIKE '%trastorno de rumiación%' or enfermedad3 LIKE '%trastorno de rumiación%')";
+                transtorno = "WHERE (enfermedades LIKE '%transtorno de rumiación%' or enfermedades LIKE '%transtorno de rumiación%' or enfermedades LIKE '%transtorno de rumiación%' or enfermedades LIKE '%trastorno de rumiación%' or enfermedades LIKE '%trastorno de rumiación%' or enfermedades LIKE '%trastorno de rumiación%')";
             } else if(trans.equals("Transtorno por evitación de la ingesta de alimentos")){
-                transtorno = "WHERE (enfermedad LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedad2 LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedad3 LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedad LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedad2 LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedad3 LIKE '%trastorno por evitación de la ingesta de alimentos%')";
+                transtorno = "WHERE (enfermedades LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%trastorno por evitación de la ingesta de alimentos%')";
             } else if(trans.equals("Ninguno")){
-                transtorno = "WHERE (enfermedad LIKE '%anorexia%' or enfermedad LIKE '%bulimia%' or enfermedad LIKE '%sobrepeso%' or enfermedad LIKE '%trastorno alimentario compulsivo%' or enfermedad LIKE '%transtorno de rumiación%' or enfermedad LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedad LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedad LIKE '%trastorno de rumiación%' or enfermedad LIKE '%transtorno alimentario compulsivo%')";    
+                transtorno = "WHERE (enfermedades LIKE '%anorexia%' or enfermedades LIKE '%bulimia%' or enfermedades LIKE '%sobrepeso%' or enfermedades LIKE '%trastorno alimentario compulsivo%' or enfermedades LIKE '%transtorno de rumiación%' or enfermedades LIKE '%transtorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%trastorno por evitación de la ingesta de alimentos%' or enfermedades LIKE '%trastorno de rumiación%' or enfermedades LIKE '%transtorno alimentario compulsivo%')";    
             } else {
                 transtorno = "";
             }

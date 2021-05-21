@@ -140,27 +140,9 @@
                 <input type="text" class="controls" name="caloriasReceta" id="caloriasReceta" placeholder="Ingrese la cantidad de calorias" required minlength="1" maxlength="9" onkeypress="return validarcp(event)">
                 <input type="text" class="controls" name="tiempoReceta" id="tiempoReceta" placeholder="Ingrese el tiempo de preparacion" required minlength="1" maxlength="199" >
                 <input type="text" class="controls" name="precioReceta" id="precioReceta" placeholder="Ingrese el precio estimado" required minlength="1" maxlength="9" onkeypress="return validarcp(event)">
-                <textarea class="controls" name="ingrediente1" id="ingrediente1" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente2" id="ingrediente2" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente3" id="ingrediente3" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente4" id="ingrediente4" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente5" id="ingrediente5" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente6" id="ingrediente6" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente7" id="ingrediente7" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente8" id="ingrediente8" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente9" id="ingrediente9" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="ingrediente10" id="ingrediente10" placeholder="Ingrese los ingredientes" required maxlength="45" rows="2"></textarea>
-                <textarea class="controls" name="proceso1" id="proceso1" placeholder="Ingrese el procedimiento 1" required rows="3"></textarea>
-                <textarea class="controls" name="proceso2" id="proceso2" placeholder="Ingrese el procedimiento 2" required rows="3"></textarea>
-                <textarea class="controls" name="proceso3" id="proceso3" placeholder="Ingrese el procedimiento 3" required rows="3"></textarea>
-                <textarea class="controls" name="proceso4" id="proceso4" placeholder="Ingrese el procedimiento 4" required rows="3"></textarea>
-                <textarea class="controls" name="proceso5" id="proceso5" placeholder="Ingrese el procedimiento 5" required rows="3"></textarea>
-                <textarea class="controls" name="proceso6" id="proceso6" placeholder="Ingrese el procedimiento 6" required rows="3"></textarea>
-                <textarea class="controls" name="proceso7" id="proceso7" placeholder="Ingrese el procedimiento 7" required rows="3"></textarea>
-                <textarea class="controls" name="proceso8" id="proceso8" placeholder="Ingrese el procedimiento 8" required rows="3"></textarea>
-                                <input type="text" class="controls" name="enfermedad" id="nombreReceta" placeholder="Ingrese para que enfermedad va destinada este platillo" required minlength="1" maxlength="99" >
-                <input type="text" class="controls" name="enfermedad2" id="enfermedad2" placeholder="Ingrese otra enfermedad si es necesario" required minlength="1" maxlength="99" >
-                <input type="text" class="controls" name="enfermedad3" id="enfermedad3" placeholder="Ingrese otra enfermedad si es necesario" required minlength="1" maxlength="99" >
+                <textarea class="controls" name="ingredientes" id="ingredientes" placeholder="Ingrese los ingredientes" required maxlength="350" rows="5"></textarea>
+                <textarea class="controls" name="procesos" id="procesos" placeholder="Ingrese los procedimientos" required rows="8"></textarea>
+                <input type="text" class="controls" name="enfermedades" id="enfermedades" placeholder="Ingrese para que enfermedad va destinada este platillo" required minlength="1" maxlength="99" >
                 <input type="text" class="controls" name="idCategoriasRecetas" id="idCategoriasRecetas" placeholder="Ingrese el id de categoria" required minlength="1" maxlength="9" onkeypress="return validarcp(event)">
                 
                 <input type="submit" class="botones" name="accion" value="Registrar">  

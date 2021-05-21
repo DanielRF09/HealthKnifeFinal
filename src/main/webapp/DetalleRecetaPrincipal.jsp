@@ -79,37 +79,9 @@
 			<div class="listingredientes">
 				<h2>Ingredientes</h2>
 				<ul>
-					<li class="contlista"><h2>Ingrediente 1</h2> 
-						<ul><li><p><%= rec.getIngrediente1()%></p></li></ul>
+					<li class="contlista"> 
+						<ul><li><p><%= rec.getIngredientes()%></p></li></ul>
 					</li>
-					<li class="contlista"><h3>Ingrediente 2</h3> 
-						<ul><li><p><%= rec.getIngrediente2()%></p></li></ul>
-					</li>
-					<li class="contlista"><h3>Ingrediente 3</h3> 
-						<ul><li><p><%= rec.getIngrediente3()%></p></li></ul>
-					</li>
-					<li class="contlista"><h3>Ingrediente 4</h3> 
-						<ul><li><p><%= rec.getIngrediente4()%></p></li></ul>
-					</li>
-                                        <li class="contlista"><h3>Ingrediente 5</h3> 
-						<ul><li><p><%= rec.getIngrediente5()%></p></li></ul>
-					</li>
-                                        <li class="contlista"><h3>Ingrediente 6</h3> 
-						<ul><li><p><%= rec.getIngrediente6()%></p></li></ul>
-					</li>
-                                        <li class="contlista"><h3>Ingrediente 7</h3> 
-						<ul><li><p><%= rec.getIngrediente7()%></p></li></ul>
-					</li>
-                                        <li class="contlista"><h3>Ingrediente 8</h3> 
-						<ul><li><p><%= rec.getIngrediente8()%></p></li></ul>
-					</li>
-                                        <li class="contlista"><h3>Ingrediente 9</h3> 
-						<ul><li><p><%= rec.getIngrediente9()%></p></li></ul>
-					</li>
-                                        <li class="contlista"><h3>Ingrediente 10</h3> 
-						<ul><li><p><%= rec.getIngrediente10()%></p></li></ul>
-					</li>
-                                        
 					
 				</ul>
 				<hr>
@@ -117,30 +89,10 @@
 			<div class="listpreparacion">
 				<h2>Preparación</h2>
 				<ul>
-					<li class="contlista"><h3>Paso 1</h3> 
-						<ul><li><p><%= rec.getProceso1()%></p></li></ul>
+					<li class="contlista"> 
+						<ul><li><p><%= rec.getProcesos()%></p></li></ul>
 					</li>
-					<li class="contlista"><h3>Paso 2</h3> 
-						<ul><li><p><%= rec.getProceso2()%></p></li></ul>
-					</li>
-					<li class="contlista"><h3>Paso 3</h3> 
-						<ul><li><p><%= rec.getProceso3()%></p></li></ul>
-					</li>
-					<li class="contlista"><h3>Paso 4</h3> 
-						<ul><li><p><%= rec.getProceso4()%></p></li></ul>
-					</li>
-                                        <li class="contlista"><h3>Paso 5</h3> 
-						<ul><li><p><%= rec.getProceso5()%></p></li></ul>
-					</li>
-					<li class="contlista"><h3>Paso 6</h3> 
-						<ul><li><p><%= rec.getProceso6()%></p></li></ul>
-					</li>
-					<li class="contlista"><h3>Paso 7</h3> 
-						<ul><li><p><%= rec.getProceso7()%></p></li></ul>
-					</li>
-					<li class="contlista"><h3>Paso 8</h3> 
-						<ul><li><p><%= rec.getProceso8()%></p></li></ul>
-					</li>
+					
 				</ul>
 			</div>
 		</div>
@@ -166,9 +118,7 @@
 			<div class="recomendado">
 				<h4>Recomendado para personas con:</h4>
 				<ul class="contenedorbvr">
-					<li><%= rec.getEnfermedad() %></li>
-					<li><%= rec.getEnfermedad2() %></li>
-                                        <li><%= rec.getEnfermedad3() %></li>
+					<li><%= rec.getEnfermedades() %></li>
 					
 				</ul>
 			</div>

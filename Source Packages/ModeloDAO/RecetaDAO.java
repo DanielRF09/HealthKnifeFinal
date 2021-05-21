@@ -26,9 +26,8 @@ public class RecetaDAO implements CRUDRecetas{
         ResultSet rs;
         
         ArrayList<Receta>list = new ArrayList<>();
-        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingrediente1, r.ingrediente2, r.ingrediente3,\n" +
-                        "r.ingrediente4, r.ingrediente5, r.ingrediente6, r.ingrediente7, r.ingrediente8, r.ingrediente9, r.ingrediente10, r.proceso1, r.proceso2, r.proceso3, \n" +
-                        "r.proceso4, r.proceso5, r.proceso6, r.proceso7, r.proceso8, r.enfermedad, r.enfermedad2, r.enfermedad3, c.nombreCategoria \n" +
+        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingredientes,\n" +
+                        "r.procesos, r.enfermedades, c.nombreCategoria \n" +
                         "From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas ORDER by idReceta;";
         try{
         
@@ -46,27 +45,9 @@ public class RecetaDAO implements CRUDRecetas{
                 rec.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 rec.setTiempoReceta(rs.getString("tiempoReceta"));
                 rec.setPrecioReceta(rs.getDouble("precioReceta"));
-                rec.setIngrediente1(rs.getString("ingrediente1"));
-                rec.setIngrediente2(rs.getString("ingrediente2"));
-                rec.setIngrediente3(rs.getString("ingrediente3"));
-                rec.setIngrediente4(rs.getString("ingrediente4"));
-                rec.setIngrediente5(rs.getString("ingrediente5"));
-                rec.setIngrediente6(rs.getString("ingrediente6"));
-                rec.setIngrediente7(rs.getString("ingrediente7"));
-                rec.setIngrediente8(rs.getString("ingrediente8"));
-                rec.setIngrediente9(rs.getString("ingrediente9"));
-                rec.setIngrediente10(rs.getString("ingrediente10"));
-                rec.setProceso1(rs.getString("proceso1"));
-                rec.setProceso2(rs.getString("proceso2"));
-                rec.setProceso3(rs.getString("proceso3"));
-                rec.setProceso4(rs.getString("proceso4"));
-                rec.setProceso5(rs.getString("proceso5"));
-                rec.setProceso6(rs.getString("proceso6"));
-                rec.setProceso7(rs.getString("proceso7"));
-                rec.setProceso8(rs.getString("proceso8"));
-                rec.setEnfermedad(rs.getString("enfermedad"));
-                rec.setEnfermedad2(rs.getString("enfermedad2"));
-                rec.setEnfermedad3(rs.getString("enfermedad3"));
+                rec.setIngredientes(rs.getString("ingredientes"));
+                rec.setProcesos(rs.getString("procesos"));
+                rec.setEnfermedades(rs.getString("enfermedades"));
                 rec.setNombreCategoria(rs.getString("nombreCategoria"));
 
                 //agregamos el usuario
@@ -110,27 +91,9 @@ public class RecetaDAO implements CRUDRecetas{
                 r.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 r.setTiempoReceta(rs.getString("tiempoReceta"));
                 r.setPrecioReceta(rs.getDouble("precioReceta"));
-                r.setIngrediente1(rs.getString("ingrediente1"));
-                r.setIngrediente2(rs.getString("ingrediente2"));
-                r.setIngrediente3(rs.getString("ingrediente3"));
-                r.setIngrediente4(rs.getString("ingrediente4"));
-                r.setIngrediente5(rs.getString("ingrediente5"));
-                r.setIngrediente6(rs.getString("ingrediente6"));
-                r.setIngrediente7(rs.getString("ingrediente7"));
-                r.setIngrediente8(rs.getString("ingrediente8"));
-                r.setIngrediente9(rs.getString("ingrediente9"));
-                r.setIngrediente10(rs.getString("ingrediente10"));
-                r.setProceso1(rs.getString("proceso1"));
-                r.setProceso2(rs.getString("proceso2"));
-                r.setProceso3(rs.getString("proceso3"));
-                r.setProceso4(rs.getString("proceso4"));
-                r.setProceso5(rs.getString("proceso5"));
-                r.setProceso6(rs.getString("proceso6"));
-                r.setProceso7(rs.getString("proceso7"));
-                r.setProceso8(rs.getString("proceso8"));
-                r.setEnfermedad(rs.getString("enfermedad"));
-                r.setEnfermedad2(rs.getString("enfermedad2"));
-                r.setEnfermedad3(rs.getString("enfermedad3"));
+                r.setIngredientes(rs.getString("ingredientes"));
+                r.setProcesos(rs.getString("procesos"));
+                r.setEnfermedades(rs.getString("enfermedades"));
                 r.setIdCategoriasRecetas(rs.getInt("idCategoriasRecetas"));
 
             }
@@ -171,27 +134,9 @@ public class RecetaDAO implements CRUDRecetas{
                 r.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 r.setTiempoReceta(rs.getString("tiempoReceta"));
                 r.setPrecioReceta(rs.getDouble("precioReceta"));
-                r.setIngrediente1(rs.getString("ingrediente1"));
-                r.setIngrediente2(rs.getString("ingrediente2"));
-                r.setIngrediente3(rs.getString("ingrediente3"));
-                r.setIngrediente4(rs.getString("ingrediente4"));
-                r.setIngrediente5(rs.getString("ingrediente5"));
-                r.setIngrediente6(rs.getString("ingrediente6"));
-                r.setIngrediente7(rs.getString("ingrediente7"));
-                r.setIngrediente8(rs.getString("ingrediente8"));
-                r.setIngrediente9(rs.getString("ingrediente9"));
-                r.setIngrediente10(rs.getString("ingrediente10"));
-                r.setProceso1(rs.getString("proceso1"));
-                r.setProceso2(rs.getString("proceso2"));
-                r.setProceso3(rs.getString("proceso3"));
-                r.setProceso4(rs.getString("proceso4"));
-                r.setProceso5(rs.getString("proceso5"));
-                r.setProceso6(rs.getString("proceso6"));
-                r.setProceso7(rs.getString("proceso7"));
-                r.setProceso8(rs.getString("proceso8"));
-                r.setEnfermedad(rs.getString("enfermedad"));
-                r.setEnfermedad2(rs.getString("enfermedad2"));
-                r.setEnfermedad3(rs.getString("enfermedad3"));
+                r.setIngredientes(rs.getString("ingredientes"));
+                r.setProcesos(rs.getString("procesos"));
+                r.setEnfermedades(rs.getString("enfermedades"));
                 r.setIdCategoriasRecetas(rs.getInt("idCategoriasRecetas"));
 
             }
@@ -232,27 +177,9 @@ public class RecetaDAO implements CRUDRecetas{
                 r.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 r.setTiempoReceta(rs.getString("tiempoReceta"));
                 r.setPrecioReceta(rs.getDouble("precioReceta"));
-                r.setIngrediente1(rs.getString("ingrediente1"));
-                r.setIngrediente2(rs.getString("ingrediente2"));
-                r.setIngrediente3(rs.getString("ingrediente3"));
-                r.setIngrediente4(rs.getString("ingrediente4"));
-                r.setIngrediente5(rs.getString("ingrediente5"));
-                r.setIngrediente6(rs.getString("ingrediente6"));
-                r.setIngrediente7(rs.getString("ingrediente7"));
-                r.setIngrediente8(rs.getString("ingrediente8"));
-                r.setIngrediente9(rs.getString("ingrediente9"));
-                r.setIngrediente10(rs.getString("ingrediente10"));
-                r.setProceso1(rs.getString("proceso1"));
-                r.setProceso2(rs.getString("proceso2"));
-                r.setProceso3(rs.getString("proceso3"));
-                r.setProceso4(rs.getString("proceso4"));
-                r.setProceso5(rs.getString("proceso5"));
-                r.setProceso6(rs.getString("proceso6"));
-                r.setProceso7(rs.getString("proceso7"));
-                r.setProceso8(rs.getString("proceso8"));
-                r.setEnfermedad(rs.getString("enfermedad"));
-                r.setEnfermedad2(rs.getString("enfermedad2"));
-                r.setEnfermedad3(rs.getString("enfermedad3"));
+                r.setIngredientes(rs.getString("ingredientes"));
+                r.setProcesos(rs.getString("procesos"));
+                r.setEnfermedades(rs.getString("enfermedades"));
                 r.setIdCategoriasRecetas(rs.getInt("idCategoriasRecetas"));
 
             }
@@ -292,27 +219,9 @@ public class RecetaDAO implements CRUDRecetas{
                 r.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 r.setTiempoReceta(rs.getString("tiempoReceta"));
                 r.setPrecioReceta(rs.getDouble("precioReceta"));
-                r.setIngrediente1(rs.getString("ingrediente1"));
-                r.setIngrediente2(rs.getString("ingrediente2"));
-                r.setIngrediente3(rs.getString("ingrediente3"));
-                r.setIngrediente4(rs.getString("ingrediente4"));
-                r.setIngrediente5(rs.getString("ingrediente5"));
-                r.setIngrediente6(rs.getString("ingrediente6"));
-                r.setIngrediente7(rs.getString("ingrediente7"));
-                r.setIngrediente8(rs.getString("ingrediente8"));
-                r.setIngrediente9(rs.getString("ingrediente9"));
-                r.setIngrediente10(rs.getString("ingrediente10"));
-                r.setProceso1(rs.getString("proceso1"));
-                r.setProceso2(rs.getString("proceso2"));
-                r.setProceso3(rs.getString("proceso3"));
-                r.setProceso4(rs.getString("proceso4"));
-                r.setProceso5(rs.getString("proceso5"));
-                r.setProceso6(rs.getString("proceso6"));
-                r.setProceso7(rs.getString("proceso7"));
-                r.setProceso8(rs.getString("proceso8"));
-                r.setEnfermedad(rs.getString("enfermedad"));
-                r.setEnfermedad2(rs.getString("enfermedad2"));
-                r.setEnfermedad3(rs.getString("enfermedad3"));
+                r.setIngredientes(rs.getString("ingredientes"));
+                r.setProcesos(rs.getString("procesos"));
+                r.setEnfermedades(rs.getString("enfermedades"));
                 r.setIdCategoriasRecetas(rs.getInt("idCategoriasRecetas"));
 
             }
@@ -353,27 +262,9 @@ public class RecetaDAO implements CRUDRecetas{
                 r.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 r.setTiempoReceta(rs.getString("tiempoReceta"));
                 r.setPrecioReceta(rs.getDouble("precioReceta"));
-                r.setIngrediente1(rs.getString("ingrediente1"));
-                r.setIngrediente2(rs.getString("ingrediente2"));
-                r.setIngrediente3(rs.getString("ingrediente3"));
-                r.setIngrediente4(rs.getString("ingrediente4"));
-                r.setIngrediente5(rs.getString("ingrediente5"));
-                r.setIngrediente6(rs.getString("ingrediente6"));
-                r.setIngrediente7(rs.getString("ingrediente7"));
-                r.setIngrediente8(rs.getString("ingrediente8"));
-                r.setIngrediente9(rs.getString("ingrediente9"));
-                r.setIngrediente10(rs.getString("ingrediente10"));
-                r.setProceso1(rs.getString("proceso1"));
-                r.setProceso2(rs.getString("proceso2"));
-                r.setProceso3(rs.getString("proceso3"));
-                r.setProceso4(rs.getString("proceso4"));
-                r.setProceso5(rs.getString("proceso5"));
-                r.setProceso6(rs.getString("proceso6"));
-                r.setProceso7(rs.getString("proceso7"));
-                r.setProceso8(rs.getString("proceso8"));
-                r.setEnfermedad(rs.getString("enfermedad"));
-                r.setEnfermedad2(rs.getString("enfermedad2"));
-                r.setEnfermedad3(rs.getString("enfermedad3"));
+                r.setIngredientes(rs.getString("ingredientes"));
+                r.setProcesos(rs.getString("procesos"));
+                r.setEnfermedades(rs.getString("enfermedades"));
                 r.setIdCategoriasRecetas(rs.getInt("idCategoriasRecetas"));
 
             }
@@ -401,10 +292,9 @@ public class RecetaDAO implements CRUDRecetas{
         PreparedStatement ps;
         ResultSet rs;
         ArrayList<Receta>list_index = new ArrayList<>();
-        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingrediente1, r.ingrediente2, r.ingrediente3,\n" +
-                "r.ingrediente4, r.ingrediente5, r.ingrediente6, r.ingrediente7, r.ingrediente8, r.ingrediente9, r.ingrediente10, r.proceso1, r.proceso2, r.proceso3, \n" +
-                "r.proceso4, r.proceso5, r.proceso6, r.proceso7, r.proceso8, r.enfermedad, r.enfermedad2, r.enfermedad3, c.nombreCategoria \n" +
-                "From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas;";
+        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingredientes,\n" +
+                "r.procesos, r.enfermedades, c.nombreCategoria \n" +
+                "From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas ORDER by idReceta;";
         try{
         
             con = cn.getConnection();
@@ -421,27 +311,9 @@ public class RecetaDAO implements CRUDRecetas{
                 rec.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 rec.setTiempoReceta(rs.getString("tiempoReceta"));
                 rec.setPrecioReceta(rs.getDouble("precioReceta"));
-                rec.setIngrediente1(rs.getString("ingrediente1"));
-                rec.setIngrediente2(rs.getString("ingrediente2"));
-                rec.setIngrediente3(rs.getString("ingrediente3"));
-                rec.setIngrediente4(rs.getString("ingrediente4"));
-                rec.setIngrediente5(rs.getString("ingrediente5"));
-                rec.setIngrediente6(rs.getString("ingrediente6"));
-                rec.setIngrediente7(rs.getString("ingrediente7"));
-                rec.setIngrediente8(rs.getString("ingrediente8"));
-                rec.setIngrediente9(rs.getString("ingrediente9"));
-                rec.setIngrediente10(rs.getString("ingrediente10"));
-                rec.setProceso1(rs.getString("proceso1"));
-                rec.setProceso2(rs.getString("proceso2"));
-                rec.setProceso3(rs.getString("proceso3"));
-                rec.setProceso4(rs.getString("proceso4"));
-                rec.setProceso5(rs.getString("proceso5"));
-                rec.setProceso6(rs.getString("proceso6"));
-                rec.setProceso7(rs.getString("proceso7"));
-                rec.setProceso8(rs.getString("proceso8"));
-                rec.setEnfermedad(rs.getString("enfermedad"));
-                rec.setEnfermedad2(rs.getString("enfermedad2"));
-                rec.setEnfermedad3(rs.getString("enfermedad3"));
+                rec.setIngredientes(rs.getString("ingredientes"));
+                rec.setProcesos(rs.getString("procesos"));
+                rec.setEnfermedades(rs.getString("enfermedades"));
                 rec.setNombreCategoria(rs.getString("nombreCategoria"));
                 
                 //agregamos el usuario
@@ -472,10 +344,9 @@ public class RecetaDAO implements CRUDRecetas{
         PreparedStatement ps;
         ResultSet rs;
         ArrayList<Receta>list_index = new ArrayList<>();
-        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingrediente1, r.ingrediente2, r.ingrediente3,\n" +
-"r.ingrediente4, r.ingrediente5, r.ingrediente6, r.ingrediente7, r.ingrediente8, r.ingrediente9, r.ingrediente10, r.proceso1, r.proceso2, r.proceso3, \n" +
-"r.proceso4, r.proceso5, r.proceso6, r.proceso7, r.proceso8, r.enfermedad, r.enfermedad2, r.enfermedad3, c.nombreCategoria \n" +
-"From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas;";
+        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingredientes,\n" +
+                "r.procesos, r.enfermedades, c.nombreCategoria \n" +
+                "From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas ORDER by idReceta;";
         try{
         
             con = cn.getConnection();
@@ -492,27 +363,9 @@ public class RecetaDAO implements CRUDRecetas{
                 rec.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 rec.setTiempoReceta(rs.getString("tiempoReceta"));
                 rec.setPrecioReceta(rs.getDouble("precioReceta"));
-                rec.setIngrediente1(rs.getString("ingrediente1"));
-                rec.setIngrediente2(rs.getString("ingrediente2"));
-                rec.setIngrediente3(rs.getString("ingrediente3"));
-                rec.setIngrediente4(rs.getString("ingrediente4"));
-                rec.setIngrediente5(rs.getString("ingrediente5"));
-                rec.setIngrediente6(rs.getString("ingrediente6"));
-                rec.setIngrediente7(rs.getString("ingrediente7"));
-                rec.setIngrediente8(rs.getString("ingrediente8"));
-                rec.setIngrediente9(rs.getString("ingrediente9"));
-                rec.setIngrediente10(rs.getString("ingrediente10"));
-                rec.setProceso1(rs.getString("proceso1"));
-                rec.setProceso2(rs.getString("proceso2"));
-                rec.setProceso3(rs.getString("proceso3"));
-                rec.setProceso4(rs.getString("proceso4"));
-                rec.setProceso5(rs.getString("proceso5"));
-                rec.setProceso6(rs.getString("proceso6"));
-                rec.setProceso7(rs.getString("proceso7"));
-                rec.setProceso8(rs.getString("proceso8"));
-                rec.setEnfermedad(rs.getString("enfermedad"));
-                rec.setEnfermedad2(rs.getString("enfermedad2"));
-                rec.setEnfermedad3(rs.getString("enfermedad3"));
+                rec.setIngredientes(rs.getString("ingredientes"));
+                rec.setProcesos(rs.getString("procesos"));
+                rec.setEnfermedades(rs.getString("enfermedades"));
                 rec.setNombreCategoria(rs.getString("nombreCategoria"));
 
                 //agregamos el usuario
@@ -542,10 +395,9 @@ public class RecetaDAO implements CRUDRecetas{
         PreparedStatement ps;
         ResultSet rs;
         ArrayList<Receta>list_index = new ArrayList<>();
-        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingrediente1, r.ingrediente2, r.ingrediente3,\n" +
-"r.ingrediente4, r.ingrediente5, r.ingrediente6, r.ingrediente7, r.ingrediente8, r.ingrediente9, r.ingrediente10, r.proceso1, r.proceso2, r.proceso3, \n" +
-"r.proceso4, r.proceso5, r.proceso6, r.proceso7, r.proceso8, r.enfermedad, r.enfermedad2, r.enfermedad3, c.nombreCategoria \n" +
-"From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas;";
+        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingredientes,\n" +
+                "r.procesos, r.enfermedades, c.nombreCategoria \n" +
+                "From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas ORDER by idReceta;";
         try{
         
             con = cn.getConnection();
@@ -562,27 +414,9 @@ public class RecetaDAO implements CRUDRecetas{
                 rec.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 rec.setTiempoReceta(rs.getString("tiempoReceta"));
                 rec.setPrecioReceta(rs.getDouble("precioReceta"));
-                rec.setIngrediente1(rs.getString("ingrediente1"));
-                rec.setIngrediente2(rs.getString("ingrediente2"));
-                rec.setIngrediente3(rs.getString("ingrediente3"));
-                rec.setIngrediente4(rs.getString("ingrediente4"));
-                rec.setIngrediente5(rs.getString("ingrediente5"));
-                rec.setIngrediente6(rs.getString("ingrediente6"));
-                rec.setIngrediente7(rs.getString("ingrediente7"));
-                rec.setIngrediente8(rs.getString("ingrediente8"));
-                rec.setIngrediente9(rs.getString("ingrediente9"));
-                rec.setIngrediente10(rs.getString("ingrediente10"));
-                rec.setProceso1(rs.getString("proceso1"));
-                rec.setProceso2(rs.getString("proceso2"));
-                rec.setProceso3(rs.getString("proceso3"));
-                rec.setProceso4(rs.getString("proceso4"));
-                rec.setProceso5(rs.getString("proceso5"));
-                rec.setProceso6(rs.getString("proceso6"));
-                rec.setProceso7(rs.getString("proceso7"));
-                rec.setProceso8(rs.getString("proceso8"));
-                rec.setEnfermedad(rs.getString("enfermedad"));
-                rec.setEnfermedad2(rs.getString("enfermedad2"));
-                rec.setEnfermedad3(rs.getString("enfermedad3"));
+                rec.setIngredientes(rs.getString("ingredientes"));
+                rec.setProcesos(rs.getString("procesos"));
+                rec.setEnfermedades(rs.getString("enfermedades"));
                 rec.setNombreCategoria(rs.getString("nombreCategoria"));
 
                 //agregamos el usuario
@@ -612,10 +446,9 @@ public class RecetaDAO implements CRUDRecetas{
         PreparedStatement ps;
         ResultSet rs;
         ArrayList<Receta>list_index = new ArrayList<>();
-        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingrediente1, r.ingrediente2, r.ingrediente3,\n" +
-"r.ingrediente4, r.ingrediente5, r.ingrediente6, r.ingrediente7, r.ingrediente8, r.ingrediente9, r.ingrediente10, r.proceso1, r.proceso2, r.proceso3, \n" +
-"r.proceso4, r.proceso5, r.proceso6, r.proceso7, r.proceso8, r.enfermedad, r.enfermedad2, r.enfermedad3, c.nombreCategoria \n" +
-"From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas;";
+        String sql = "Select r.idReceta, r.nombreReceta, r.imgReceta, r.descripcion, r.caloriasReceta, r.tiempoReceta, r.precioReceta, r.ingredientes,\n" +
+                "r.procesos, r.enfermedades, c.nombreCategoria \n" +
+                "From receta AS r INNER JOIN categoriasrecetas AS c ON r.idCategoriasRecetas=c.idCategoriasRecetas ORDER by idReceta;";
         try{
         
             con = cn.getConnection();
@@ -632,27 +465,9 @@ public class RecetaDAO implements CRUDRecetas{
                 rec.setCaloriasReceta(rs.getInt("caloriasReceta"));
                 rec.setTiempoReceta(rs.getString("tiempoReceta"));
                 rec.setPrecioReceta(rs.getDouble("precioReceta"));
-                rec.setIngrediente1(rs.getString("ingrediente1"));
-                rec.setIngrediente2(rs.getString("ingrediente2"));
-                rec.setIngrediente3(rs.getString("ingrediente3"));
-                rec.setIngrediente4(rs.getString("ingrediente4"));
-                rec.setIngrediente5(rs.getString("ingrediente5"));
-                rec.setIngrediente6(rs.getString("ingrediente6"));
-                rec.setIngrediente7(rs.getString("ingrediente7"));
-                rec.setIngrediente8(rs.getString("ingrediente8"));
-                rec.setIngrediente9(rs.getString("ingrediente9"));
-                rec.setIngrediente10(rs.getString("ingrediente10"));
-                rec.setProceso1(rs.getString("proceso1"));
-                rec.setProceso2(rs.getString("proceso2"));
-                rec.setProceso3(rs.getString("proceso3"));
-                rec.setProceso4(rs.getString("proceso4"));
-                rec.setProceso5(rs.getString("proceso5"));
-                rec.setProceso6(rs.getString("proceso6"));
-                rec.setProceso7(rs.getString("proceso7"));
-                rec.setProceso8(rs.getString("proceso8"));
-                rec.setEnfermedad(rs.getString("enfermedad"));
-                rec.setEnfermedad2(rs.getString("enfermedad2"));
-                rec.setEnfermedad3(rs.getString("enfermedad3"));
+                rec.setIngredientes(rs.getString("ingredientes"));
+                rec.setProcesos(rs.getString("procesos"));
+                rec.setEnfermedades(rs.getString("enfermedades"));
                 rec.setNombreCategoria(rs.getString("nombreCategoria"));
 
                 //agregamos el usuario
@@ -681,7 +496,7 @@ public class RecetaDAO implements CRUDRecetas{
         Connection con;
         PreparedStatement ps;
         ResultSet rs;
-        String sql = "CALL agregarReceta('"+rec.getNombreReceta()+"','"+rec.getImgReceta()+"', '"+rec.getDescripcion()+"', "+rec.getCaloriasReceta()+", '"+rec.getTiempoReceta()+"', "+rec.getPrecioReceta()+", '"+rec.getIngrediente1()+"', '"+rec.getIngrediente2()+"', '"+rec.getIngrediente3()+"', '"+rec.getIngrediente4()+"', '"+rec.getIngrediente5()+"', '"+rec.getIngrediente6()+"', '"+rec.getIngrediente7()+"', '"+rec.getIngrediente8()+"', '"+rec.getIngrediente9()+"', '"+rec.getIngrediente10()+"', '"+rec.getProceso1()+"', '"+rec.getProceso2()+"', '"+rec.getProceso3()+"', '"+rec.getProceso4()+"', '"+rec.getProceso5()+"', '"+rec.getProceso6()+"', '"+rec.getProceso7()+"', '"+rec.getProceso8()+"', '"+rec.getEnfermedad()+"', '"+rec.getEnfermedad2()+"', '"+rec.getEnfermedad3()+"', "+rec.getIdCategoriasRecetas()+" )";
+        String sql = "CALL agregarReceta('"+rec.getNombreReceta()+"','"+rec.getImgReceta()+"', '"+rec.getDescripcion()+"', "+rec.getCaloriasReceta()+", '"+rec.getTiempoReceta()+"', "+rec.getPrecioReceta()+", '"+rec.getIngredientes()+"', '"+rec.getProcesos()+"', '"+rec.getEnfermedades()+"', "+rec.getIdCategoriasRecetas()+" )";
         
         try {
             
@@ -712,7 +527,7 @@ public class RecetaDAO implements CRUDRecetas{
         Connection con;
         PreparedStatement ps;
         ResultSet rs;
-        String sql = "CALL actualizarRec("+rec.getIdReceta()+", '"+rec.getNombreReceta()+"', '"+rec.getImgReceta()+"', '"+rec.getDescripcion()+"', "+rec.getCaloriasReceta()+", '"+rec.getTiempoReceta()+"', "+rec.getPrecioReceta()+", '"+rec.getIngrediente1()+"', '"+rec.getIngrediente2()+"', '"+rec.getIngrediente3()+"', '"+rec.getIngrediente4()+"', '"+rec.getIngrediente5()+"', '"+rec.getIngrediente6()+"', '"+rec.getIngrediente7()+"', '"+rec.getIngrediente8()+"', '"+rec.getIngrediente9()+"', '"+rec.getIngrediente10()+"', '"+rec.getProceso1()+"', '"+rec.getProceso2()+"', '"+rec.getProceso3()+"', '"+rec.getProceso4()+"', '"+rec.getProceso5()+"', '"+rec.getProceso6()+"', '"+rec.getProceso7()+"', '"+rec.getProceso8()+"', '"+rec.getEnfermedad()+"', '"+rec.getEnfermedad2()+"', '"+rec.getEnfermedad3()+"', "+rec.getIdCategoriasRecetas()+" )";
+        String sql = "CALL actualizarRec("+rec.getIdReceta()+", '"+rec.getNombreReceta()+"', '"+rec.getImgReceta()+"', '"+rec.getDescripcion()+"', "+rec.getCaloriasReceta()+", '"+rec.getTiempoReceta()+"', "+rec.getPrecioReceta()+", '"+rec.getIngredientes()+"', '"+rec.getProcesos()+"', '"+rec.getEnfermedades()+"', "+rec.getIdCategoriasRecetas()+" )";
         
         try {
             
@@ -742,7 +557,7 @@ public class RecetaDAO implements CRUDRecetas{
         Connection con;
         PreparedStatement ps;
         ResultSet rs;
-        String sql = "CALL actualizarRec("+rec.getIdReceta()+", '"+rec.getNombreReceta()+"', '"+rec.getImgReceta()+"', '"+rec.getDescripcion()+"', "+rec.getCaloriasReceta()+", '"+rec.getTiempoReceta()+"', "+rec.getPrecioReceta()+", '"+rec.getIngrediente1()+"', '"+rec.getIngrediente2()+"', '"+rec.getIngrediente3()+"', '"+rec.getIngrediente4()+"', '"+rec.getIngrediente5()+"', '"+rec.getIngrediente6()+"', '"+rec.getIngrediente7()+"', '"+rec.getIngrediente8()+"', '"+rec.getIngrediente9()+"', '"+rec.getIngrediente10()+"', '"+rec.getProceso1()+"', '"+rec.getProceso2()+"', '"+rec.getProceso3()+"', '"+rec.getProceso4()+"', '"+rec.getProceso5()+"', '"+rec.getProceso6()+"', '"+rec.getProceso7()+"', '"+rec.getProceso8()+"', '"+rec.getEnfermedad()+"', '"+rec.getEnfermedad2()+"', '"+rec.getEnfermedad3()+"', "+rec.getIdCategoriasRecetas()+" )";
+        String sql = "CALL actualizarRec("+rec.getIdReceta()+", '"+rec.getNombreReceta()+"', '"+rec.getImgReceta()+"', '"+rec.getDescripcion()+"', "+rec.getCaloriasReceta()+", '"+rec.getTiempoReceta()+"', "+rec.getPrecioReceta()+", '"+rec.getIngredientes()+"', '"+rec.getProcesos()+"', '"+rec.getEnfermedades()+"', "+rec.getIdCategoriasRecetas()+" )";
         
         try {
             

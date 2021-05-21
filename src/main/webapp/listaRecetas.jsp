@@ -164,16 +164,7 @@
                         <td style="font-size: 10px; text-align: justify;">
                         
                             <ol>
-                                <li><%= rec.getIngrediente1() %></li>
-                                <li><%= rec.getIngrediente2() %></li>
-                                <li><%= rec.getIngrediente3() %></li>
-                                <li><%= rec.getIngrediente4() %></li>
-                                <li><%= rec.getIngrediente5() %></li>
-                                <li><%= rec.getIngrediente6() %></li>
-                                <li><%= rec.getIngrediente7() %></li>
-                                <li><%= rec.getIngrediente8() %></li>
-                                <li><%= rec.getIngrediente9() %></li>
-                                <li><%= rec.getIngrediente10() %></li>
+                                <li><%= rec.getIngredientes() %></li>
                             
                             </ol>
 
@@ -181,14 +172,7 @@
                         <td style="font-size: 10px; text-align: justify;">
                         
                             <ol>
-                                <li><%= rec.getProceso1() %></li>
-                                <li><%= rec.getProceso2() %></li>
-                                <li><%= rec.getProceso3() %></li>
-                                <li><%= rec.getProceso4() %></li>
-                                <li><%= rec.getProceso5() %></li>
-                                <li><%= rec.getProceso6() %></li>
-                                <li><%= rec.getProceso7() %></li>
-                                <li><%= rec.getProceso8() %></li>
+                                <li><%= rec.getProcesos() %></li>
      
                             </ol>
                         
@@ -197,9 +181,7 @@
                         <td style="font-size: 10px; text-align: justify;">
                         
                             <ol>
-                                <li><%= rec.getEnfermedad() %></li>
-                                <li><%= rec.getEnfermedad2() %></li>
-                                <li><%= rec.getEnfermedad3() %></li>
+                                <li><%= rec.getEnfermedades() %></li>
      
                             </ol>
                         
